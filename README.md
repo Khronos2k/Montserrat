@@ -19,7 +19,7 @@ Santiago Baltasar Vera Marquez: tengo 21 años, desde chico me intersaba la info
 
 Francisco Leonel Morla: tengo 23 años estudio ingenieria quimica, me gusta la informatica tengo experiencia basica. Me gusta entrenar deportes de contacto y actualmente hago calistenia. 
 
-
+Julieta Agustina Mamaní Pérez: tengo 21 años estudio ingenieria agronomica, pero me interesa la tecnologia mas que nada la mecatronica. Me gusta el arte, pintar, dibujar y la musica. 
 
 3. Buscar inspiración en referentes del mercado
   
