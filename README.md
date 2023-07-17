@@ -23,14 +23,14 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 > Tengo 22 años :octocat:. Mis hobbies son dibujar :pencil2:, aprender piano :musical_keyboard: y desarrollar videojuegos con amigos :video_game:. Me gusta y soy ordenado aunque no simepre fue así ( ¬_¬). Me dedico a hacer software de inventario y demás desde los 16 años, específicamente los relaciodados al flujo de personas y productos en un local. Tengo algo de experiencia en desarrollo web, debido a que lo estudié hace varios años, pero mi interés por desarrolar webs regresó recientemente, por lo que muchos temas que ya abordé en su momento me resultan igual de refrescantes y desafiantes que en aquel entonces. 
 
 **Fernando Rafael Aramayo**
-> Tengo 20 años, actualemnte estudio el profesorado de matemáticas, así que se podría decir que estoy principalemente enfocado en mis estudios. Soy de La Quiaca, y me considero alguien desordenado pero no dejo que eso afecte mi rendimiento y cumplimiento con mis responsabilidades. Me gusta dormir, y las matematicas. 
-(Como compañeros creemos que Rafa es una persona observadora y paciente, escuchando como se maneja en sus practicas con sus clases, vemos que tiene una virtud para enseñar e integrar a su entorno)
+> Tengo 20 años, actualemnte estudio el profesorado de matemáticas :books:, así que se podría decir que estoy principalemente enfocado en mis estudios. Soy de La Quiaca, y me considero alguien desordenado pero no dejo que eso afecte mi rendimiento y cumplimiento con mis responsabilidades. Oh~ y me gusta dormir. 
+(Como compañeros creemos que Rafa es una persona observadora y paciente, escuchando como se maneja en sus prácticas con sus clases, vemos que tiene una virtud para enseñar e integrar a su entorno)
 
 **Santiago Baltasar Vera Marquez** 
-> Tengo 21 años, desde chico me intersaba la informatica por eso ahora estudio ingenieria informatica, hice cursos de hardware y software. En cuanto al desarollo web, el frontend lo pude estudiar un poco en la facu y luego fui autodidacta en el tema. Me gustan los deportes, hago calistenia aunque en el ultimo tiempo no pude debido a la facultad, toco la guitarra pero tampoco pude dedicarle tanto tiempo ultimamente.
+> Tengo 21 años. Desde chico me tuve un interés por la informática, lo que me llevó a estudiar ingeniería informática. Realicé cursos de hardware y software. En cuanto al desarollo web, el frontend lo pude estudiar un poco en la facultad y también por cuenta propia. Me gustan los deportes :running:, hago calistenia aunque en el último tiempo no pude debido al estudio, toco la guitarra :guitar: pero tampoco pude dedicarle tanto tiempo ultimamente.
 
 **Francisco Leonel Morla** 
-> Tengo 23 años estudio ingenieria quimica :microscope:, me gusta la informatica tengo experiencia basica. Me gusta entrenar deportes de contacto y actualmente hago calistenia :muscle:.
+> Tengo 23 años estudio ingenieria quimica :microscope:, me gusta la informática tengo experiencia basica. Me gusta entrenar deportes de contacto y actualmente hago calistenia :muscle:.
 
 **Julieta Agustina Mamaní Pérez**
 > Tengo 21 años estudio ingenieria agronomica, pero me interesa la tecnologia mas que nada la mecatronica. Me gusta el arte, pintar, dibujar y la musica.
