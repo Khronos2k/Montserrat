@@ -15,7 +15,7 @@ Un adicional que se pretende incorporar es, un sistema que permita realizar un s
 ### Audiencia objetivo
 Nuestra audiencia objetivo serian las personas interesadas en X_RB, en consumir en el local y disfrutar un buen momento.
 
-### De cara al público
+### De cara al nuevo público
 Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y delimitaremos la zona de trabajo del delivery. 
 
 ### Integrantes del equipo
