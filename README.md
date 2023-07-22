@@ -37,7 +37,7 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 ## Referentes del mercado
   
 * [Marti](https://marti.meitre.com/)
-* [Osaka](https://www.osakanikkei.com/reservas-miami.html)
+* [Osaka](https://www.osakanikkei.com/en/local/miami)
 * [Basa](https://basabar.com.ar/)
 * [Bar Los Galgs](https://barlosgalgos.com.ar/)
 * [La Calle Bar](https://www.lacallebar.com/)
