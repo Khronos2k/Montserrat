@@ -43,5 +43,5 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 * [La Calle Bar](https://www.lacallebar.com/)
 * [Simpleat](https://simpleat.com.ar/)
 ## Wireframe
-* [Wireframe](https://wireframe.cc/pro/pp/5a38f3ba7671679)
+* [Wireframe](https://wireframe.cc/pro/pp/02249be1c671484)
 
