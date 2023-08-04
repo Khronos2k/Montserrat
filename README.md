@@ -42,8 +42,8 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 * [Bar Los Galgs](https://barlosgalgos.com.ar/)
 * [La Calle Bar](https://www.lacallebar.com/)
 * [Simpleat](https://simpleat.com.ar/)
-* [Bar de Hong Kong Uncle Ming] (https://www.facebook.com/unclemingshk)
-* [DARA] (https://www.instagram.com/p/CphjdZYL2Pc/)
+* [Bar de Hong Kong Uncle Ming](https://www.facebook.com/unclemingshk)
+* [DARA](https://www.instagram.com/p/CphjdZYL2Pc/)
 
 ## Wireframe
 * [Wireframe](https://wireframe.cc/pro/pp/02249be1c671484)
