@@ -4,7 +4,7 @@
   "description": "La temática gira en torno a una **cadena de restobares** que busca ampliar su alcance al público. Para ello, decidieron que ya era momento de empezar a tener presencia en internet, ofreciendo una alternativa que centralice cada uno de sus servicios y que, además, proporcione información a clientes habituales como a potenciales clientes.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
