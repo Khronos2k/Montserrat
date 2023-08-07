@@ -9,8 +9,13 @@
 ## Estuvo bien: 
 ## Estuvo mal: 
 
-### Empezar a hacer (+): aquí se incluyen todas las acciones nuevas, innovadoras o creativas que se quieren probar.
-### Dejar de hacer  (-): aquellas actividades que se quieren erradicar porque no están generando valor.
-### Hacer más       (>): las actividades o ideas que tal vez estamos haciendo y nos aportan valor, y por ello debemos seguir haciendo.
-### Hacer menos     (<): contempla acciones que estamos haciendo pero no generan valor y, al no ser obligatorias, podemos hacerlas en menor medida.
-### Seguir haciendo (=): actividades que aportan valor o son útiles y el equipo quiere mantener en la misma medida.
+### Empezar a hacer (+): 
+
+### Dejar de hacer  (-): 
+
+### Hacer más       (>): 
+
+### Hacer menos     (<): 
+
+### Seguir haciendo (=): 
+
