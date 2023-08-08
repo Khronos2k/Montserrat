@@ -6,6 +6,7 @@
 ## Espacio y lista de participantes
   Se uso la sala 1 y 2 para realizar las reuniones del grupo. Para poder intercambiar ideas y concretar reuniones 
   se uso un grupo de whatsapp y un grupo en discord.
+  
      * Participantes: * 
                       + Aramayo, Fernando
                       * Mamani, Julieta
@@ -27,7 +28,8 @@
                 Ausencia de miembros del grupo en el gitHub y en el Trello
                 
 ### Start Doing    (+): 
-                        Buscar alternativas innovadoras para el diseño como por ejemplo;Realizar Animacion 3D en el home de la pagina
+                        Buscar alternativas innovadoras para el diseño de la pagina como por ejemplo: 
+                          Realizar Animacion 3D en el home.
                         Diseño con Figma
                     
 ### Stop Doing     (-): 
