@@ -5,18 +5,15 @@
 * hola
 
 ## Espacio y lista de participantes
-~~~~~~~~
+
   Se uso la sala 1 y 2 para realizar las reuniones del grupo. Para poder intercambiar ideas y concretar reuniones 
   se uso un grupo de whatsapp y un grupo en discord.
-
-                      * Aramayo, Fernando
-                      * Mamani, Julieta
+                      + Aramayo, Fernando
+                      + Mamani, Julieta
                       * Mampaso, Elbio
                       * Morla, Francisco
-                      * Vera, Santiago
-                      *     , Abril
-~~~~~~~~~
-                      
+                      + Vera, Santiago
+                      +     , Abril
 ## Estuvo bien: 
                 Intercambio de ideas con respecto a la tematica del proyecto, todos los participantes pudieron expresar 
                   su punto de vista.
