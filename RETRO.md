@@ -2,18 +2,20 @@
 
 ## Fecha, sprint y duración
 11/07/2023. 1º sprint. Duración aproximada de 2 semanas.
+* hola
 
 ## Espacio y lista de participantes
+~~~~~~~~
   Se uso la sala 1 y 2 para realizar las reuniones del grupo. Para poder intercambiar ideas y concretar reuniones 
   se uso un grupo de whatsapp y un grupo en discord.
-  
-     * Participantes: * 
-                      + Aramayo, Fernando
+
+                      * Aramayo, Fernando
                       * Mamani, Julieta
                       * Mampaso, Elbio
                       * Morla, Francisco
                       * Vera, Santiago
                       *     , Abril
+~~~~~~~~~
                       
 ## Estuvo bien: 
                 Intercambio de ideas con respecto a la tematica del proyecto, todos los participantes pudieron expresar 
