@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login</title>
 </head>
 <body>
-    <h1>Registro</h1>
-    <main class="form">
-        <div>
-            <form action="/" method="get">
+
+    <main>
+
+        <div class="form-login">
+            <h1 class="login">Login</h1>
+            <form action="/login" method="get">
+                <P>
+                    <input type="text" name="E-mail" placeholder="Username">
+                    <label for="usuario"></label>
+                </P>
+                <P>
+                    <input type="password" name="constraseña" placeholder="Password">
+                    <label for="constraseña"></label>
+                </P>
+                <p><a href="#">¿No tenes cuenta?</a></p>
+
+                <div>
+                    <button>Crear</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-register">
+            <h1 class="login">Registro</h1>
+            <form action="/register" method="get">
                 <p>Perfil de usuario</p>
                 <label for="foto"></label>
                 <input type="file" name="foto de usuario" id="foto" accept=".jpg" required>

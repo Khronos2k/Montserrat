@@ -59,6 +59,93 @@ body {
     height: 100vh;
 }
 
+.login{
+    padding: 9px;
+    text-align: center;
+}
+
+/* -------------------------Seccion login y register------------------------ */
+    /* Centrar el formulario en la página */
+.form-login {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+      /* Centrar el título del formulario */
+  .form-login h1 {
+    text-align: center;
+  }
+  
+    /* Agregar un borde alrededor del formulario */
+  .form-login form {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+/* Mostrar las etiquetas en bloque */
+  .form-login label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+/* Estilizar campos de texto */
+  .form-login input[type="text"],
+  .form-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+
+/* Centrar el formulario en la página */
+.form-register {
+    margin: 0 auto;
+    width: 300px;
+  }
+  
+/* Centrar el título del formulario */
+  .form-register h1 {
+    text-align: center;
+  }
+
+/* Agregar un borde alrededor del formulario */
+  .form-register form {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+/* Mostrar las etiquetas en bloque */
+  .form-register label {
+    
+    display: block;
+    margin-bottom: 5px;
+  }
+
+/* Estilizar los campos de texto */
+  .form-register input[type="text"],
+  .form-register input[type="email"],
+  .form-register input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+/* Estilizar el botón de envío */
+  .form-register button[type="submit"] {  
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 100%;
+  }
+    
+/* Estilizar el botón de cancelar */
+  .form-register button[type="reset"] {
+    background-color: #636363;
+    color: white;
+    padding: 10px;
+    width: 100%;
+  }
+
+/* -------------------------Seccion login y register------------------------ */
 
 
 /* 
