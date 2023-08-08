@@ -5,16 +5,18 @@
 
 ## Espacio y lista de participantes
   Se uso la sala 1 y 2 para realizar las reuniones del grupo. Para poder intercambiar ideas y concretar reuniones 
-    se uso un grupo de whatsapp y un grupo en discord.
-    * ### Participantes *: 
-                      * Aramayo, Fernando
+  se uso un grupo de whatsapp y un grupo en discord.
+     * Participantes: * 
+                      + Aramayo, Fernando
                       * Mamani, Julieta
                       * Mampaso, Elbio
                       * Morla, Francisco
                       * Vera, Santiago
                       *     , Abril
+                      
 ## Estuvo bien: 
-                Intercambio de ideas con respecto a la tematica del proyecto, todos los participantes pudieron expresar su punto de vista.
+                Intercambio de ideas con respecto a la tematica del proyecto, todos los participantes pudieron expresar 
+                  su punto de vista.
                 Buen ambiente de trabajo en las reuniones.
                 Creacion de un tablero de  trabajo
                 
@@ -40,6 +42,7 @@
 ### Less of         (<): 
                         Tardanza de respuestas en los medios de comunicacion usados.
                         Tardanza en la asistencia de las reuniones.
+                        
 ### Keep going      (=): 
                         Intercambio de ideas 
                         Buen mbiente de trabajo en las reuniones.
