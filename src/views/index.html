@@ -14,10 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Navbar -->
     <header class="header">
         <div class="header__logo">
-            <img src="" alt="LOGO">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
         </div>
+        <button class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- <div class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
         <nav class="header__navbar">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item"><a href="#">Home</a></li>
@@ -35,13 +42,159 @@
             </ul>
         </div>
     </header>
+    <!-- Hero -->
     <main class="main">
         <div class="hero">
-            <div class="hero__image"></div>
-            <div class="hero__content-title">
-
+            <div class="hero__bg"></div>
+            <div class="hero__content">
+                <h1 class="hero__content--title">Be The Fastest In Delivery Your <span>Food</span></h1>
+                <h3 class="hero__content--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+                <button class="navbar__buttom navbar__buttom--in-hero"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Get Started</a></button>
             </div>
         </div>
+        <!-- Steps -->
+        <section class="steps">
+            <div class="headboard">
+                <h4 class="headboard__subtitle">How it works</h4>
+                <h3 class="headboard__title">What We Server</h3>
+                <p class="headboard__paragraph">Product Quality Is Our Priority, And Always Guarantees</p>
+                <p class="headboard__paragraph">Halal And Safety Until It Is In Your Hands</p>                
+            </div>
+            <div class="steps__card">
+                <img class="steps__img" src="/images/img-temp.png" alt="img-temp">
+                <h3 class="steps__title">Easy to Order</h3>
+                <p class="steps__paragraph">You only order through</p>
+            </div>
+            <div class="steps__card">
+                <img class="steps__img" src="/images/img-temp.png" alt="img-temp">
+                <h3 class="steps__title">Fastest Delivery</h3>
+                <p class="steps__paragraph"> Delivery will be on time</p>
+            </div>
+            <div class="steps__card">
+                <img class="steps__img" src="/images/img-temp.png" alt="img-temp">
+                <h3 class="steps__title">Best Quality</h3>
+                <p class="steps__paragraph">The best quality of food for you</p>
+            </div>
+        </section>
+        <!-- Menu -->
+        <section class="menu">
+            <div class="headboard">
+                <h4 class="headboard__subtitle">Our Menu</h4>
+                <h3 class="headboard__title">Our Popular Menu</h3>
+                <p class="headboard__paragraph">Product Quality Is Our Priority, And Always Guarantees</p>
+                <p class="headboard__paragraph">Halal And Safety Until It Is In Your Hands</p>                
+            </div>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="/images/muestra02-drink.jpg" alt="" class="product-card__image">
+                    <div class="product-card__information">
+                        <h4 class="product-card__information-title">title</h4>
+                        <p class="product-card__information-type">lorem ipsum</p>
+                        <p class="product-card__information-price">$ 00.0</p>
+                        <div class="product-card__information-fav"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/images/saranggola-drink.jpg" alt="" class="product-card__image">
+                    <div class="product-card__information">
+                        <h4 class="product-card__information-title">title</h4>
+                        <p class="product-card__information-type">lorem ipsum</p>
+                        <p class="product-card__information-price">$ 00.0</p>
+                        <div class="product-card__information-fav"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/images/negroni-week-drink.jpg" alt="" class="product-card__image">
+                    <div class="product-card__information">
+                        <h4 class="product-card__information-title">title</h4>
+                        <p class="product-card__information-type">lorem ipsum</p>
+                        <p class="product-card__information-price">$ 00.0</p>
+                        <div class="product-card__information-fav"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/images/muestra01-drink.jpg" alt="" class="product-card__image">
+                    <div class="product-card__information">
+                        <h4 class="product-card__information-title">title</h4>
+                        <p class="product-card__information-type">lorem ipsum</p>
+                        <p class="product-card__information-price">$ 00.0</p>
+                        <div class="product-card__information-fav"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar__buttom navbar__buttom--in-menu"><a href="/menu">More Menu</a></button>
+        </section>
+        <section class="comments">
+            <div class="headboard">
+                <h4 class="headboard__subtitle">What the say</h4>
+                <h3 class="headboard__title">What Our Customers Say About Us</h3>
+                <p class="headboard__paragraph">Product Quality Is Our Priority, And Always Guarantees</p>
+                <p class="headboard__paragraph">Halal And Safety Until It Is In Your Hands</p>
+            </div>
+            <div class="comments__container">
+                <div class="comments-card">
+                    <div class="comments-card__top">
+                        <img class="comments-card__user-photo" src="/images/user01-user.jpg" alt="user">
+                        <div class="comments-card__name-ranking">
+                            <div class="comments-card__user-name">
+                                <p>Naura Silvina</p>
+                            </div>
+                            <div class="comments-card__user-ranking">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-card__bottom">
+                        <div class="comments-card__user-comments">
+                            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nostrum odio assumenda culpa veniam pariatur sequi explicabo."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content">
+            <div class="content__column">
+                <div class="header__logo header__logo--footer">
+                    <img src="/images/logo-oasis-black-on-white.svg" alt="Logo">
+                </div>
+                <p class="content__column-text">Av. AAAA AAA, SSSSS SSSS, Argentina, 00000</p>
+                <div class="content__social">
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="content__social-networks content__social-networks--jump-color">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Company</h3>
+                <p class="content__column-text"><a href="#">About Us</a></p>
+                <p class="content__column-text"><a href="#">Career</a></p>
+                <p class="content__column-text"><a href="#">How It Work</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Policy</h3>
+                <p class="content__column-text"><a href="#">FAQ</a></p>
+                <p class="content__column-text"><a href="#">Privacy</a></p>
+                <p class="content__column-text"><a href="#">Shipping</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Get In Touch</h3>
+                <p class="content__column-text">+54 388 0000 0000</p>
+                <p class="content__column-text">oasis@example.com</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
