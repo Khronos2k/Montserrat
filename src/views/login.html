@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo" href="/">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+        </a>
+        <!-- <div class="header__logo">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+        </div> -->
+        <button class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- <div class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+        <nav class="header__navbar">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item"><a href="#">Home</a></li>
+                <li class="header__navbar-item"><a href="#">Menu</a></li>
+                <li class="header__navbar-item"><a href="#">How it works</a></li>
+                <li class="header__navbar-item"><a href="#">About</a></li>
+                <li class="header__navbar-item"><a href="#">Services</a></li>
+            </ul>
+        </nav>
+        <div class="header__icons">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar__buttom"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="form-login">
+            <h1 class="login">Login</h1>
+            <form action="/login" method="get">
+                <P>
+                    <input type="text" name="E-mail" placeholder="Username">
+                    <label for="usuario"></label>
+                </P>
+                <P>
+                    <input type="password" name="constraseña" placeholder="Password">
+                    <label for="constraseña"></label>
+                </P>
+                <p><a href="#">¿No tenes cuenta?</a></p>
+
+                <div>
+                    <button>Crear</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-register">
+            <h1 class="login">Registro</h1>
+            <form action="/register" method="get">
+                <p>Perfil de usuario</p>
+                <label for="foto"></label>
+                <input type="file" name="foto de usuario" id="foto" accept=".jpg" required>
+                <label for="Nombre y Apellido">Nombre y Apellido</label>
+                <input type="text" name="Nombre y Apellido" id="Nombre y Apellido" required>
+                <label for="usuario">Usuario</label>
+                <input type="text" name="Nombre y Apellido" id="usuario" required>
+                <label for="email">E-mail</label>
+                <input type="email" name="E-mail" id="email" required>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" required>
+                <label for="confirmacion">Confirmar contraseña</label>
+                <input type="password" name="confirmacion" id="confirmacion" required>
+                <button type="reset">Cancelar</button>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>

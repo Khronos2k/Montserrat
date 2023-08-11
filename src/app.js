@@ -14,5 +14,21 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/sign-in', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/sign-in.html'))
+    res.sendFile(path.resolve(__dirname, './views/login.html'))
+})
+
+app.get('/cart', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, './views/productCart.html'))
+})
+
+app.get('/details', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
+})
+
+app.get('/register', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, './views/register.html'))
+})
+
+app.get('/menu', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, './views/menu.html'))
 })

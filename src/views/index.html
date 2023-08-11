@@ -16,9 +16,12 @@
 <body>
     <!-- Navbar -->
     <header class="header">
-        <div class="header__logo">
+        <a class="header__logo" href="/">
             <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
-        </div>
+        </a>
+        <!-- <div class="header__logo">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+        </div> -->
         <button class="header__menu-icon">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -27,8 +30,8 @@
         </div> -->
         <nav class="header__navbar">
             <ul class="header__navbar-list">
-                <li class="header__navbar-item"><a href="#">Home</a></li>
-                <li class="header__navbar-item"><a href="#">Menu</a></li>
+                <li class="header__navbar-item"><a href="/">Home</a></li>
+                <li class="header__navbar-item"><a href="/menu">Menu</a></li>
                 <li class="header__navbar-item"><a href="#">How it works</a></li>
                 <li class="header__navbar-item"><a href="#">About</a></li>
                 <li class="header__navbar-item"><a href="#">Services</a></li>
@@ -37,11 +40,12 @@
         <div class="header__icons">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="header__navbar-item"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li class="navbar__buttom"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a></li>
             </ul>
         </div>
     </header>
+    <!-- /Navbar -->
     <!-- Hero -->
     <main class="main">
         <div class="hero">
@@ -128,13 +132,65 @@
             <div class="headboard">
                 <h4 class="headboard__subtitle">What the say</h4>
                 <h3 class="headboard__title">What Our Customers Say About Us</h3>
-                <p class="headboard__paragraph">Product Quality Is Our Priority, And Always Guarantees</p>
-                <p class="headboard__paragraph">Halal And Safety Until It Is In Your Hands</p>
             </div>
             <div class="comments__container">
                 <div class="comments-card">
                     <div class="comments-card__top">
-                        <img class="comments-card__user-photo" src="/images/user01-user.jpg" alt="user">
+                        <div class="comments-card__img-container">
+                            <img class="comments-card__user-photo" src="/images/user01-user.jpg" alt="user">
+                        </div>
+                        <div class="comments-card__name-ranking">
+                            <div class="comments-card__user-name">
+                                <p>Naura Silvina</p>
+                            </div>
+                            <div class="comments-card__user-ranking">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-card__bottom">
+                        <div class="comments-card__user-comments">
+                            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nostrum odio assumenda culpa veniam pariatur sequi explicabo."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments__container">
+                <div class="comments-card">
+                    <div class="comments-card__top">
+                        <div class="comments-card__img-container">
+                            <img class="comments-card__user-photo" src="/images/user02-user.jpg" alt="user">
+                        </div>
+                        <div class="comments-card__name-ranking">
+                            <div class="comments-card__user-name">
+                                <p>Naura Silvina</p>
+                            </div>
+                            <div class="comments-card__user-ranking">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-card__bottom">
+                        <div class="comments-card__user-comments">
+                            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nostrum odio assumenda culpa veniam pariatur sequi explicabo."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments__container">
+                <div class="comments-card">
+                    <div class="comments-card__top">
+                        <div class="comments-card__img-container">
+                            <img class="comments-card__user-photo" src="/images/user03-user.jpg" alt="user">
+                        </div>
                         <div class="comments-card__name-ranking">
                             <div class="comments-card__user-name">
                                 <p>Naura Silvina</p>
