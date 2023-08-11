@@ -424,8 +424,8 @@ body {
 /*carrito de compra*/
 
 .cart__title{
-    margin: 40px 0 30px;
-    font-size: 32px;
+    margin: 30px 0 30px;
+    font-size: 30px;
     max-width: 1279px;
     
 }
@@ -469,9 +469,14 @@ body {
     box-sizing: border-box;
     text-align: left;
 }
+.producto-producto-descripcion{
+    display:inline-block;
+    justify-content: center; 
+}
 .producto-producto-imagen{
     height: 60px;
     width: 50px;
+    
 }
 th, td {
     padding: 8px;
