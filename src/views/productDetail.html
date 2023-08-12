@@ -3,9 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oasis</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <header class="header">
+        <a class="header__logo" href="/">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+        </a>
+        <!-- <div class="header__logo">
+            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+        </div> -->
+        <button class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- <div class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+        <nav class="header__navbar">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item"><a href="/">Home</a></li>
+                <li class="header__navbar-item"><a href="/menu">Menu</a></li>
+                <li class="header__navbar-item"><a href="#">How it works</a></li>
+                <li class="header__navbar-item"><a href="#">About</a></li>
+                <li class="header__navbar-item"><a href="#">Services</a></li>
+            </ul>
+        </nav>
+        <div class="header__icons">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li class="header__navbar-item"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar__buttom"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- /Navbar -->
+    <main class="cart">
+        <div>
+         <table class="cart__products__details">
+             <colgroup>
+                 <col style="width: 60%;"> 
+                 <col style="width: 40%;">
+             </colgroup>
+             <tbody >
+                 <tr>
+                     <td>                     
+                     <img class="detalle__producto-imagen" src="/images/muestra02-drink.jpg" alt="Trago 1"> 
+                     </td>
+                     <td >
+                       <a class="detalle__producto-titulo">NAME 1</a>
+                       <div>
+                        <a class="detalle__producto-info">Ingredientes</a>
+                        <ul>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                        </ul>
+                        <a class="detalle__producto-info">Informacion Nutritiva</a>
+                        <ul>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                            <li> jaskjhuiailsajsl </li>
+                        </ul>
+                        
+                       </div>
+                       <div>
+                           <div class="detalle__producto__cant" >
+                                <a href="#cart-24783731-qty" class="detalle__producto__cant-boton"><span>-</span></a>
+                                <input id="cant" class="detalle__producto__cant-cant"value="1" type="number" size="4" step="any" title="Cantidad">
+                                <a href="#cart-24783731-qty" class="detalle__producto__cant-boton"><span>+</span></a>
+                           </div>
+                           <a>=</a>
+                           <div class="detalle__producto__cant" >
+                            <a href="#cart-24783731-qty" class="detalle__producto__cant-boton"><span>$00.000,00</span></a>
+                            </div>
+                        </div>
+                        <div class="detalle__producto__cant__pedido">
+                            <div class="detalle__producto__cant__pedido-order">
+                                <a>Pide tu comida ahora</a>
+                                 <a href="#cart-24783731-qty" class="detalle__producto__pedido-boton"><span>Hacer pedido</span></a>
+                            </div>
+                            <a>ó</a>
+                            <div class="detalle__producto__cant__pedido-order" >
+                                <span>Agregalo a tu carrito</span>
+                                <a href="#cart-24783731-qty" class="detalle__producto__pedido-order-boton">
+                                    <img src="/images/carrito.png" class="detalle__producto__cant-cart">
+                                </a>
+                            </div>
+                         </div>
+                  
+                     </td>
+                 </tr>
+             </tbody>
+         </table>
+        </div>
+ 
+     </main>
+
+     <!-- footer -->
+    <footer class="footer">
+        <div class="content">
+            <div class="content__column">
+                <div class="header__logo header__logo--footer">
+                    <img src="/images/logo-oasis-black-on-white.svg" alt="Logo">
+                </div>
+                <p class="content__column-text">Av. AAAA AAA, SSSSS SSSS, Argentina, 00000</p>
+                <div class="content__social">
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="content__social-networks content__social-networks--jump-color">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Company</h3>
+                <p class="content__column-text"><a href="#">About Us</a></p>
+                <p class="content__column-text"><a href="#">Career</a></p>
+                <p class="content__column-text"><a href="#">How It Work</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Policy</h3>
+                <p class="content__column-text"><a href="#">FAQ</a></p>
+                <p class="content__column-text"><a href="#">Privacy</a></p>
+                <p class="content__column-text"><a href="#">Shipping</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Get In Touch</h3>
+                <p class="content__column-text">+54 388 0000 0000</p>
+                <p class="content__column-text">oasis@example.com</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
