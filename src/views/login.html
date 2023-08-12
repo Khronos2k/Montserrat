@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- header -->
     <header class="header">
-        <a class="header__logo" href="/">
-            <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
-        </a>
+        <div class="header__logo">
+            <a class="header__logo" href="/">
+                <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
+            </a>
+        </div>
         <!-- <div class="header__logo">
             <img src="/images/logo-oasis-color-on-white.svg" alt="LOGO">
         </div> -->
@@ -30,7 +33,7 @@
         <nav class="header__navbar">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item"><a href="#">Home</a></li>
-                <li class="header__navbar-item"><a href="#">Menu</a></li>
+                <li class="header__navbar-item"><a href="/menu">Menu</a></li>
                 <li class="header__navbar-item"><a href="#">How it works</a></li>
                 <li class="header__navbar-item"><a href="#">About</a></li>
                 <li class="header__navbar-item"><a href="#">Services</a></li>
@@ -39,53 +42,74 @@
         <div class="header__icons">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__navbar-item"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li class="navbar__buttom"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a></li>
+                <li class="header__navbar-item"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="buttom"><a href="/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</a></li>
             </ul>
         </div>
     </header>
-    <main>
-        <div class="form-login">
-            <h1 class="login">Login</h1>
-            <form action="/login" method="get">
-                <P>
-                    <input type="text" name="E-mail" placeholder="Username">
-                    <label for="usuario"></label>
-                </P>
-                <P>
-                    <input type="password" name="constraseña" placeholder="Password">
-                    <label for="constraseña"></label>
-                </P>
-                <p><a href="#">¿No tenes cuenta?</a></p>
-
-                <div>
-                    <button>Crear</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="form-register">
-            <h1 class="login">Registro</h1>
-            <form action="/register" method="get">
-                <p>Perfil de usuario</p>
-                <label for="foto"></label>
-                <input type="file" name="foto de usuario" id="foto" accept=".jpg" required>
-                <label for="Nombre y Apellido">Nombre y Apellido</label>
-                <input type="text" name="Nombre y Apellido" id="Nombre y Apellido" required>
-                <label for="usuario">Usuario</label>
-                <input type="text" name="Nombre y Apellido" id="usuario" required>
-                <label for="email">E-mail</label>
-                <input type="email" name="E-mail" id="email" required>
-                <label for="contraseña">Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña" required>
-                <label for="confirmacion">Confirmar contraseña</label>
-                <input type="password" name="confirmacion" id="confirmacion" required>
-                <button type="reset">Cancelar</button>
-                <button type="submit">Enviar</button>
-
-            </form>
-        </div>
-
+    <!-- /header -->
+    <!-- main -->
+    <main class="main">
+        <section class="form-container">
+            <div class="form-container__form-box">
+                <h1 class="form-container__title">Login</h1>
+                <form class="form" action="/login" method="get">
+                    <div class="form__item">
+                        <input type="text" name="E-mail" placeholder="Username/Email" class="form__item-input">
+                        <label for="usuario"></label>
+                    </div>
+                    <div class="form__item">
+                        <input type="password" name="constraseña" placeholder="Password" class="form__item-input">
+                        <label for="constraseña"></label>
+                    </div>
+                    <div class="form__item">
+                        <a class="form__item--link" href="/register">You do not have an account?</a>
+                    </div>
+                    <button class="buttom buttom-center"><i class="fa-solid fa-arrow-right-to-bracket"></i>Enter</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <!-- /main -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content">
+            <div class="content__column">
+                <div class="header__logo header__logo--footer">
+                    <img src="/images/logo-oasis-black-on-white.svg" alt="Logo">
+                </div>
+                <p class="content__column-text">Av. AAAA AAA, SSSSS SSSS, Argentina, 00000</p>
+                <div class="content__social">
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="content__social-networks content__social-networks--jump-color">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="content__social-networks">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Company</h3>
+                <p class="content__column-text"><a href="#">About Us</a></p>
+                <p class="content__column-text"><a href="#">Career</a></p>
+                <p class="content__column-text"><a href="#">How It Work</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Policy</h3>
+                <p class="content__column-text"><a href="#">FAQ</a></p>
+                <p class="content__column-text"><a href="#">Privacy</a></p>
+                <p class="content__column-text"><a href="#">Shipping</a></p>
+            </div>
+            <div class="content__column">
+                <h3 class="content__column-title">Get In Touch</h3>
+                <p class="content__column-text">+54 388 0000 0000</p>
+                <p class="content__column-text">oasis@example.com</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
 </body>
 </html>
