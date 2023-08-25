@@ -1,5 +1,5 @@
 # RETROSPECTIVA
-***SPRINT 1***
+# (***SPRINT 1***)
 ## Fecha, sprint y duración
 11/07/2023. 1º sprint. Duración aproximada de 2 semanas.
 
