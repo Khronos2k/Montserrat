@@ -1,5 +1,6 @@
 # RETROSPECTIVA
-# (***SPRINT 1***)
+
+# ***SPRINT 1***
 ## Fecha, sprint y duración
 11/07/2023. 1º sprint. Duración aproximada de 2 semanas.
 
@@ -49,7 +50,7 @@
                         Intercambio de ideas 
                         Buen mbiente de trabajo en las reuniones.
 
-***SPRINT 2***
+# ***SPRINT 2***
 ## Fecha, sprint y duración
 Inicio: 27/07/2023. 2º sprint. 
 Duración: aproximadamente 2 semanas.
