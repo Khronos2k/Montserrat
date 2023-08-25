@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+    <!-- header -->
+    <%- include('partials/header.ejs') %>
+    <main class="main">
+        <section class="form-container">
+            <div class="form-container__form-box">
+                <h1 class="form-container__title">Register</h1>
+                <form class="form" action="">
+                    <!-- <div class="form__item">
+                        <label for="foto"></label>
+                        <input class="form__item-input" type="file" name="foto de usuario" id="foto" accept=".jpg" required>
+                    </div> -->
+                    <div class="form__item">
+                        <!-- <label for="Nombre y Apellido">Nombre y Apellido</label> -->
+                        <input class="form__item-input" placeholder="Name and Last name" type="text" name="Nombre y Apellido" id="Nombre y Apellido" required>
+                    </div>
+                    <div class="form__item">
+                        <!-- <label for="usuario">Usuario</label> -->
+                        <input class="form__item-input" placeholder="User name" type="text" name="Nombre y Apellido" id="usuario" required>
+                    </div>
+                    <div class="form__item">
+                        <!-- <label for="email">E-mail</label> -->
+                        <input class="form__item-input" placeholder="Email" type="email" name="E-mail" id="email" required>
+                    </div>
+                    <div class="form__item">
+                        <!-- <label for="contraseña">Contraseña</label> -->
+                        <input class="form__item-input" placeholder="Password" type="password" name="contraseña" id="contraseña" required>
+                    </div>
+                    <div class="form__item">
+                        <!-- <label for="confirmacion">Confirmar contraseña</label> -->
+                        <input class="form__item-input" placeholder="Confirm Password" type="password" name="confirmacion" id="confirmacion" required>
+                    </div>
+                    <div class="form__buttom-box">
+                        <button class="button" type="reset">Cancelar</button>
+                        <button class="button" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
