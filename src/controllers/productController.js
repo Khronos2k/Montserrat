@@ -1,13 +1,13 @@
 const productController = {
-    showProductsAll: (res, req) => {
-        res.render('productAll')
+    index: (req, res) => {
+        res.render('cart/products')
     },
-    showProductDetails: (res,req) => {
-        res.render('productDetail')
+    showProductCart: (req, res) => {
+        res.render('cart/productCart')
     },
-    showProductCart: (res, req) => {
-        res.render('productCart')
-    }
+    showProductDetails: (req,res) => {
+        res.render('cart/productDetail')
+    },
 }
 
 module.exports = productController;
