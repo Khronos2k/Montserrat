@@ -10,7 +10,11 @@ const productController = {
         res.render('cart/productCart')
     },
     showProductDetails: (req,res) => {
-        res.render('cart/productDetail')
+        const id = req.params.id;
+        // console.log(id);
+        const product = products.find(item => item.id == id);
+        console.log(product);
+        res.render('cart/productDetail', {product})
     },
 }
 

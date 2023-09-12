@@ -2,9 +2,9 @@
     --background-default: #f0f0f0;
     --box-color-default: #f0f0f0;
     --box-shadow-default: 13px 13px 25px #cccccc,-13px -13px 25px #ffffffd7;
-    --box-shadow-default--button: 5px 5px 11px #cccccc, -5px -5px 11px #ffffffd7;
-    --box-shadow-default--button-color: 5px 5px 11px #b8731e7b, -5px -5px 11px #fa9b286e; 
-    --box-shadow-default--reduct: 2px 2px 4px #cccccc, -5px -5px 11px #ffffffd7;
+    --box-shadow-default--button: 5px 5px 10px #cccccc, -5px -5px 10px #ffffffd7;
+    --box-shadow-default--button-color: 5px 5px 10px #b8731e7b, -5px -5px 10px #fa9b286e; 
+    --box-shadow-default--reduct: 2px 2px 4px #cccccc, -2px -2px 4px #ffffffd7;
 
     --box-shadow-default--reverse: inset 13px 13px 25px #cccccc, inset -13px -13px 25px #ffffff;;
 
@@ -160,12 +160,12 @@ body {
 
 /*B>FOOTER-----------------------------------------*/
 .container-footer {
-    background-color: var(--background-dark-color);
+    background-color: var(--background-default);
 }
 .footer {
     width: 100%;
     max-width: 1200px;
-}
+}   
 
 /*B>COVER------------------------------------------*/
 
