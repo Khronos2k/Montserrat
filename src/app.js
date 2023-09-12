@@ -6,12 +6,15 @@ const path = require('path');
 //  *Override: require - (don't modify)
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+//  *------v
+const cookieParser = require('cookie-parser')
 //  *Express: ubicación de los archivos de imagenes & estilos - (don't modify)
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 //--
 app.use(express.urlencoded({extended:false}));
-app.use(express.json())
+app.use(express.json());
+app.use(cookieParser());
 //  *Express: indicamos la utilización de template engine y la ubicación de las vistas - (don't modify)
 app.set('view engine', 'ejs')
 app.set('views', './src/views');

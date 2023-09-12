@@ -1,36 +1,35 @@
-[{
-    "id":"1", 
-    "name":"Macelo",
-    "lastName":"Mamaní",
-    "email":"marcelo@gmail.com",  
-    "cell":"3885042525",
-    "pasword":"Contraseña",
-    "category":"Comida",
-    "image":"",
-    "address":"1"      
-},
-{
-    "id":"2", 
-    "name":"Fernando",
-    "lastName":"Canchi",
-    "email":"user@gmail.com",  
-    "cell":"38845255",
-    "pasword":"Contraseña",
-    "category":"Bar",
-    "image":"",
-    "address":"1"      
-
-},{
-    "id":"3", 
-    "name":"Matias",
-    "lastName":"Cruz",
-    "email":"maatt@gmail.com",  
-    "cell":"388594580",
-    "pasword":"Contraseña",
-    "category":"Comida",
-    "image":"",
-    "address":"1"      
-
-}
-
+[
+    {
+        "id":"1", 
+        "name":"Macelo",
+        "lastName":"Mamaní",
+        "email":"marcelo@gmail.com",  
+        "cell":"3885042525",
+        "pasword":"Contraseña",
+        "category":"Comida",
+        "image":"",
+        "address":"1"
+    },
+    {
+        "id":"2", 
+        "name":"Fernando",
+        "lastName":"Canchi",
+        "email":"user@gmail.com",  
+        "cell":"38845255",
+        "pasword":"Contraseña",
+        "category":"Bar",
+        "image":"",
+        "address":"1"
+    },
+    {
+        "id":"3", 
+        "name":"Matias",
+        "lastName":"Cruz",
+        "email":"maatt@gmail.com",  
+        "cell":"388594580",
+        "pasword":"Contraseña",
+        "category":"Comida",
+        "image":"",
+        "address":"1"
+    }
 ]

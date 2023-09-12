@@ -48,14 +48,18 @@
                                     <div class="product-card__cont">
                                         <div class="product-card__item-group">
                                             <div class="product-card__item-group product-card__item-group--left">
+                                                <% if(item.discount){ %>
                                                 <div class="product-card__price-previous">
                                                     <span class="product-card__symbol">$</span>
-                                                    <span><%= item.price%></span>
+                                                    <span><%= toThousend(item.price)%></span>
                                                 </div>
+                                                <% } %>
                                                 <div class="product-card__price">
                                                     <span class="product-card__symbol">$</span>
-                                                    <span class=""><%= item.price%></span>
-                                                    <span class="product-card__price-discount">29% OFF</span>
+                                                    <span class=""><%= toThousend(item.price-(item.price*item.discount/100))%></span>
+                                                    <% if(item.discount){ %>
+                                                    <span class="product-card__price-discount"><%= item.discount %> % OFF</span>
+                                                    <% } %>
                                                 </div>
                                             </div>
                                         </div>

@@ -32,14 +32,18 @@
                                 </div>
                             </div>
                             <div class="product-information__item product-information__item--price">
+                                <% if(product.discount){ %>
                                 <div class="item__price-previous">
                                     <span class="product-card__symbol">$</span>
-                                    <span>11.000</span>
+                                    <span><%= toThousend(product.price)%></span>
                                 </div>
+                                <% } %>
                                 <div class="item__price">
                                     <span class="item__symbol">$</span>
-                                    <span><%= product.price%></span>
-                                    <span class="item__price-discount">29% OFF</span>
+                                    <span><%= toThousend(product.price-(product.price*product.discount/100))%></span>
+                                    <% if(product.discount){ %>
+                                    <span class="item__price-discount"><%= product.discount%> % OFF</span>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="product-information__item product-information__item--ingredients">
@@ -55,7 +59,12 @@
                         </div>
                     </div>
                     <div class="product-panel">
-                        <button class="button button--product-panel" type="">Comprar ahora</button>
+                        <button class="button button__product-panel" type="">Comprar ahora</button>
+                        <button class="button button__product-panel" type="">Agregar al carro</button>
+                        <a href="/product/update/<%= product.id%>" class="button button__product-panel button__product-panel--delete" type="">Modificar</a>
+                        <form action="/product/delete/<%= product.id %>" method="POST">
+                            <button type="submit" class="button button__product-panel button__product-panel--delete" type="">Eliminar</button>
+                        </form>
                     </div>
                 </div>
             </section>
