@@ -19,7 +19,7 @@ const productController = {
     showProductDetails: (req,res) => {
         const id = req.params.id;
         const product = products.find(item => item.id == id);
-        console.log(product);
+        // console.log(product);
         res.render('cart/productDetail', {product, toThousend});
     },
     edit: (req, res) => {
@@ -28,11 +28,29 @@ const productController = {
         res.render('cart/productUpdate', {productToEdit: product});
     },
     update: (req, res) => {
-        res.send('modificado');
+        const id = req.params.id;
+        const editProduct = req.body;
+        const index = products.findIndex(product => product.id == id);
+        
+        products[index].name = editProduct.name;
+        products[index].type = editProduct.type;
+        products[index].price = editProduct.price;
+        products[index].discount = editProduct.discount;
+        products[index].category = editProduct.category;
+        products[index].image = editProduct.image;
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        res.redirect("/product");
     },
 
     delete: (req, res) => {
-        res.send('eliminado')
+        const id = req.params.id;
+        // const index = products.findIndex(product => product.id == id);
+        // console.log(index);
+        const leftProducts = products.filter((product)=>product.id != id);
+        
+        fs.writeFileSync(productsFilePath, JSON.stringify(leftProducts));
+        res.redirect("/product");
     },
 
     create: (req, res) => {
@@ -42,20 +60,21 @@ const productController = {
     store: (req, res) => {
         const data = req.body;
         // res.send(data)
-        const index = products[length.length -1].id;
+        
+        const index = products[products.length -1].id;
+        console.log(index)
         const newProduct = {
-            id: index+1,
+            id: index + 1,
             name: data.name,
+            type: data.type,
             price: data.price,
             discount: data.discount,
-            type: data.type,
-            image: "default-image.png",
+            category: data.category,
+            image: "/images/products/default-image.png",
         };
         products.push(newProduct);
-
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.send('ok');
-        // res.redirect('//');
+        res.redirect("/product");;
     }
 }
 module.exports = productController;

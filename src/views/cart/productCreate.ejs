@@ -13,15 +13,16 @@
                         <div class="product-create-box__collumn-container">
                             <div class="product-create-box__collumn">
                                 <form action="/product" method="post" >
-                                    <input class="form-box__input" type="text" name="nombre" placeholder="Nombre">
-                                    <!-- <input class="form-box__input" type="text" name="ingredientes" placeholder="Ingredientes"> -->
-                                    <input class="form-box__input" type="number" name="price" id="" placeholder="Precio">
-                                    <input class="form-box__input" type="number" name="discount" id="" placeholder="Descuento">
+                                    <input class="form-box__input" type="text" name="name" placeholder="Nombre">
                                     <select class="form-box__input" name="type" id="">
                                         <option value="food">Comida</option>
                                         <option value="drink">Bebida</option>
                                         <option value="dessert">Postre</option>
                                     </select>
+                                    <input class="form-box__input" type="number" name="price" id="" placeholder="Precio">
+                                    <input class="form-box__input" type="number" name="discount" id="" placeholder="Descuento">
+                                    <input class="form-box__input" type="text" name="category" id="" placeholder="Category">
+                                    
                                     <input class="form-box__input" type="file" name="image" id="" accept=".jpg" multiple>
 
                                     <button class="button" type="submit">Crear</button>

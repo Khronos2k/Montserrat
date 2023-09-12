@@ -47,14 +47,14 @@
                                 </div>
                             </div>
                             <div class="product-information__item product-information__item--ingredients">
-                                <h4 class="product-information__tittle">Ingredientes</h4>
+                                <!-- <h4 class="product-information__tittle">Ingredientes</h4>
                                 <div class="product-information__ingredients-list">
                                     <ul class="product-information__ul">
-                                        <% for(let i=0; i<product.ingredients.length; i++){%>
-                                        <li class="product-information__li"><%=product.ingredients[i]%></li>
-                                        <%}%>
+                                        % for(let i=0; i<product.ingredients.length; i++){%>
+                                        <li class="product-information__li">%=product.ingredients[i]%></li>
+                                        %}%>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <button class="button button__product-panel" type="">Comprar ahora</button>
                         <button class="button button__product-panel" type="">Agregar al carro</button>
                         <a href="/product/update/<%= product.id%>" class="button button__product-panel button__product-panel--delete" type="">Modificar</a>
-                        <form action="/product/delete/<%= product.id %>" method="POST">
+                        <form action="/product/delete/<%= product.id %>" method="post">
                             <button type="submit" class="button button__product-panel button__product-panel--delete" type="">Eliminar</button>
                         </form>
                     </div>
