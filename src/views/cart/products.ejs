@@ -35,9 +35,9 @@
                             <!-- card -->
                             <%products.map(item => {%>
                             <li class="product-card">
-                                <div class="product-card__cont-img">
+                                <a href="/product/details/<%= item.id%>" class="product-card__cont-img">
                                     <img class="product-card__img" alt="" src="<%= item.image %>">
-                                </div>
+                                </a>
                                 <div class="product-card__cont-information">
                                     <div class="product-card__cont">
                                         <label class="product-card__label" for=""><%= item.category%></label>

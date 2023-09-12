@@ -8,7 +8,7 @@
         <div>
             <section class="container">
                 <div class="product-detail">
-                    <div class="product-view">
+                    <div class="product-view-box">
                         <div class="column-product-view">
                             <div class="product-view__image-container">
                                 <img class="product-view__image" src="<%= product.image%>" alt="img">
@@ -46,15 +46,9 @@
                                 <h4 class="product-information__tittle">Ingredientes</h4>
                                 <div class="product-information__ingredients-list">
                                     <ul class="product-information__ul">
-                                        <li class="product-information__li">Ingrediente 1</li>
-                                        <li class="product-information__li">Ingrediente 2</li>
-                                        <li class="product-information__li">ingrediente 3</li>
-                                        <li class="product-information__li">ingrediente 4</li>
-                                        <li class="product-information__li">ingrediente 5</li>
-                                        <li class="product-information__li">ingrediente 6</li>
-                                        <li class="product-information__li">ingrediente 7</li>
-                                        <li class="product-information__li">ingrediente 8</li>
-                                        <li class="product-information__li">ingrediente 9</li>
+                                        <% for(let i=0; i<product.ingredients.length; i++){%>
+                                        <li class="product-information__li"><%=product.ingredients[i]%></li>
+                                        <%}%>
                                     </ul>
                                 </div>
                             </div>

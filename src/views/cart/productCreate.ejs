@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    <main class="main">
+        <div>
+            <section class="container container--product-create">
+                <div class="product-create">
+                    <div class="product-create-box">
+                        <h2>Crear producto</h2>
+                        <div class="product-create-box__collumn-container">
+                            <div class="product-create-box__collumn">
+                                <form method="POST" action="/">
+                                    <input class="form-box__input" type="text" name="nombre" placeholder="Nombre">
+                                    <input class="form-box__input" type="text" name="ingredientes" placeholder="Ingredientes">
+                                    <input class="form-box__input" type="number" name="price" id="" placeholder="Precio">
+                                    <select class="form-box__input" name="type" id="">
+                                        <option value="food">Comida</option>
+                                        <option value="drink">Bebida</option>
+                                        <option value="dessert">Postre</option>
+                                    </select>
+                                    <input class="form-box__input" type="file" name="image" id="" accept=".jpg" multiple>
+
+                                    <input class="button" type="submit" value="Crear">
+                                </form>
+                            </div>
+                            <!-- <div class="product-create-box__collumn"></div> -->
+                            <div class="product-create-box__collumn"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <!-- <%- include('../partials/footer') %> -->
+</body>
+</html>
