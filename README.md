@@ -1,4 +1,4 @@
-# Venture
+# Montserrat
 ## Temática del Market Place
 La temática gira en torno a una **cadena de restobares** que busca ampliar su alcance al público. Para ello, decidieron que ya era momento de empezar a tener presencia en internet, ofreciendo una alternativa que centralice cada uno de sus servicios y que, además, proporcione información a clientes habituales como a potenciales clientes.
 
@@ -34,7 +34,12 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 
 **Julieta Agustina Mamaní Pérez**
 > Tengo 21 años estudio ingenieria agronomica, pero me interesa la tecnologia mas que nada la mecatronica. Me gusta el arte, pintar, dibujar y la musica.
+
+**Abril**
+> Completar...
+
 ## Referentes del mercado
+
   
 * [Marti](https://marti.meitre.com/)
 * [Osaka](https://www.osakanikkei.com/en/local/miami)
@@ -49,5 +54,5 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 * [Wireframe](https://wireframe.cc/pro/pp/02249be1c671484)
 
 ## Organizacion de Tareas / Calendario
-* Tablero de trello: https://trello.com/invite/b/RN5XGMDi/ATTIe11d8285b55e57ea3d46aad0f2d68173D0D4BF8D/web-design-development
+* [Tablero de trello](https://trello.com/invite/b/RN5XGMDi/ATTIe11d8285b55e57ea3d46aad0f2d68173D0D4BF8D/web-design-development)
 
