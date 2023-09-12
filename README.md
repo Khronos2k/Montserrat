@@ -34,10 +34,12 @@ Para ajustar nuestra oferta, no se ofreceran todas las comidas para delivery, y 
 
 **Julieta Agustina Mamaní Pérez**
 > Tengo 21 años estudio ingenieria agronomica, pero me interesa la tecnologia mas que nada la mecatronica. Me gusta el arte, pintar, dibujar y la musica.
-## Referentes del mercado
 
 **Abril**
 > Completar...
+
+## Referentes del mercado
+
   
 * [Marti](https://marti.meitre.com/)
 * [Osaka](https://www.osakanikkei.com/en/local/miami)
