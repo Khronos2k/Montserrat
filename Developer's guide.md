@@ -4,76 +4,12 @@ In this guide you will find the conventions under which we work on this project.
 
 ## Methodologies implemented
 ### Conventional Commits
-* En primer lugar, es importante dar un breve instructivo sobre la herramienta que vamos a usar en nuestro editor de código.
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+Es una convención mediante la cual vamos a escribir de ahora en adelante nuestros commits. Para de esta manera lograr mayor claridad sobre los cambios en el proyecto.
 
+> [!IMPORTANT]
+> Es importante que antes de seguir adelante con el instruvtivo, instales la extensión en tu VScode.
 
-### BEM (Block Element Modifier)
-```html
-<div class="header">
-  <div class="header__nav">
-    <div></div>
-  </div>
-</div>
-```
-
-```html
-BEM
-- Siglas
-    * B de Bloque
-    + E de Elemento
-    * M de Modificador
-
-- Estructura
-    * B__E--M
-
-- Bolque/Block: aquellos elementos que poseen una identidad independiente con significado propio. Un bloque puede ser simmple o compuesto.
-
-Restriciones de nombre de bloque: No mayus/No doble guiones consecutivos(--)/No doble guines bajos consecutivos(__). Ejemplo: Error => block--modificar || Correcto => block-modificar.
-
-Ejemplos de Bloques:
-
-<div class="header">
-    ...
-</div>
-
-<div class="search-block">
-    ...
-</div>
-
-<div class="custom-form">
-    ...
-</div>
-
-<div class="another-block-custom">
-    ...
-</div>
-
-- Elemento/Element: aquellos elementos que sean hijos de un bloque.
-
-Ejemplo de Elementos:
-
-<div class="block">
-    <div class="block__element">
-        ...
-    </div>
-    <div class="block__element">
-        ...
-    </div>
-</div>
-
-- Modificador/Modifier: Para elementos que tengan declaraciones de CSS diferentes al resto.
-
-<div class="block">
-    <div class="block__element">
-        ...
-    </div>
-    <div class="block__element block__element--modifier">
-        ...
-    </div>
-</div>
-
-```
+![image](https://github.com/Khronos2k/Montserrat/assets/108843074/2d0ff622-2387-40c0-b96e-4128da096f25)
 
 
 
@@ -85,9 +21,3 @@ Ejemplo de Elementos:
 
 > [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
-
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
-
-[^1]: My reference.

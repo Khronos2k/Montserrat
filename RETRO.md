@@ -94,4 +94,61 @@ Fin: 10/08/2023
                         Tardanza en la asistencia de las reuniones.
                         
 ### Keep going      (=): 
+
+
+# ***SPRINT 4***
+## Fecha, sprint y duración
+Decha: 24/08
+Duracion: aproximadamente 3 semanas
+
+## Espacio y lista de participantes
+  Se uso la sala 2 para realizar las reuniones del grupo.
+  #### Participantes: 
+
+  + Aramayo, Fernando Rafael
+  + Mampaso, Elbio
+  + Morla, Francisco
+  + Vera, Santiago
+  +   , Abril
+                      
+## Estuvo bien: 
+                
+                Completar el Sprint a tiempo
+                
+                
+## Estuvo mal: 
+                No hubo mejoras con respecto de la retro del sprint anterior, aunque ahora se plantean mejoras mas solidas para poder mejorar
+                
+### Start Doing    (+): 
+                        Estar mas al pendiente de los medios de comunicacion con los que se maneja el equipo por ejemplo:
+                        -Trello o whatsapp 
+                        Cumplir con los plazos de entrega
+
+                    
+### Stop Doing     (-): 
+                        No cumplimiento con los plazos de entrega establecidos por tareas
+                        No cumplimiento con los plazos de entrega establecidos para el SPRINT
+                        No cumplimiento con el uso correcto del TRELLO para reflejar su actividad en el proyecto
+                        No cumplimiento de los integrantes en notificar atrasos en los temas vistos en el curso
                         
+### More of         (>): 
+                         Mayor comunicacion e iniciativa para dar propuestas que aporten al proyecto
+                         Reuniones con mayor frecuencia durante el SPRINT actual
+                         Implementacion de un documento de proyecto que contenga las convenciones bajo las cuales trabajara el equipo de desarrollo
+
+                         
+### Less of         (<): 
+                        Procrastinar o dejar las tareas para el último momento
+                        Faltar a las reuniones o a los compromisos sin avisar o justificar
+                        
+### Keep going      (=): 
+                       Apoyar y motivar a los demás miembros del grupo
+                       Seguir las buenas prácticas de programación, como usar nombres claros, comentar el código y seguir los estándares de estilo.
+                       Ser flexible y adaptable a los cambios o imprevistos que puedan surgir en el proyecto.
+
+
+
+# ***SPRINT 5***
+## Fecha, sprint y duración
+Fecha 12/09
+Duracion: Aproximadamente 4 semanas
