@@ -34,5 +34,3 @@ app.use('/user', userRouter)
 app.listen(3001, ()=>{
     console.log('Corriendo servidor en puerto 3001');
 });
-
-// probando conventional commits
