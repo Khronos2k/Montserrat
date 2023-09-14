@@ -29,7 +29,7 @@
                     </div>
                     <div class="column-product-list">
                         <div class="product-category">
-                            
+                            <!-- Aquí insertaremos una cabecera que contendrá las marcas disponibles al firltrar por bebidas -->
                         </div>
                         <ol class="product-list">
                             <!-- card -->
@@ -46,36 +46,32 @@
                                         <h2 class="product-card__title"><%= item.name%></h2>
                                     </div>
                                     <div class="product-card__cont">
-                                        <div class="product-card__item-group">
-                                            <div class="product-card__item-group product-card__item-group--left">
+                                        <div class="product-card__item-group product-card__item-group--left">
+                                            <% if(item.discount){ %>
+                                            <div class="product-card__price-previous">
+                                                <span class="product-card__symbol">$</span>
+                                                <span><%= toThousend(item.price)%></span>
+                                            </div>
+                                            <% } %>
+                                            <div class="product-card__price">
+                                                <span class="product-card__symbol">$</span>
+                                                <span class=""><%= toThousend(item.price-(item.price*item.discount/100))%></span>
                                                 <% if(item.discount){ %>
-                                                <div class="product-card__price-previous">
-                                                    <span class="product-card__symbol">$</span>
-                                                    <span><%= toThousend(item.price)%></span>
-                                                </div>
+                                                <span class="product-card__price-discount"><%= item.discount %> % OFF</span>
                                                 <% } %>
-                                                <div class="product-card__price">
-                                                    <span class="product-card__symbol">$</span>
-                                                    <span class=""><%= toThousend(item.price-(item.price*item.discount/100))%></span>
-                                                    <% if(item.discount){ %>
-                                                    <span class="product-card__price-discount"><%= item.discount %> % OFF</span>
-                                                    <% } %>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="product-card__item-group">
-                                            <div class="product-card__item-group product-card__item-group--right">
-                                                <div class="product-card__rating">
-                                                    <span class="product-card__rating-number"><%= item.rating%></span>
-                                                    <span class="product-card__ratings">
-                                                        <span class="fas fa-star"></span>
-                                                        <span class="fas fa-star"></span>
-                                                        <span class="fas fa-star"></span>
-                                                        <span class="fas fa-star"></span>
-                                                        <span class="fas fa-star"></span>
-                                                    </span>
-                                                    <span class="product-card__amount">(555)</span>
-                                                </div>
+                                        <div class="product-card__item-group product-card__item-group--right">
+                                            <div class="product-card__rating">
+                                                <span class="product-card__rating-number">4.7</span>
+                                                <span class="product-card__ratings">
+                                                    <span class="fas fa-star"></span>
+                                                    <span class="fas fa-star"></span>
+                                                    <span class="fas fa-star"></span>
+                                                    <span class="fas fa-star"></span>
+                                                    <span class="fas fa-star"></span>
+                                                </span>
+                                                <span class="product-card__amount">(555)</span>
                                             </div>
                                         </div>
                                     </div>
