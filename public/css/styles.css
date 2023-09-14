@@ -194,13 +194,13 @@ body {
 .cover-content__title {
     font-family: var(--font-family-secondary);
     letter-spacing: 5px;
-    font-size: 10em;
+    font-size: 4em;
     line-height: 1em;
     font-weight: normal;
     text-align: center;
 }
 .cover-content__subtitle {
-    font-size: 1.3em;
+    font-size: .8em;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -645,7 +645,6 @@ body {
         height: 160px;
     }
 
-
     
 }
 /* Portátil */
@@ -656,6 +655,13 @@ body {
     .header__i {
         display: none;
     }
+    .cover-content__title {
+        font-size: 10em;
+    }
+    .cover-content__subtitle {
+        font-size: 1.3em;
+    }
+
 
     .product {
         flex-direction: row;
