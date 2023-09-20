@@ -16,10 +16,10 @@ productRouter.get('/details/:id', productController.showProductDetails);
 //  *** GET EDIT FORM ***
 productRouter.get('/update/:id', productController.edit);
 //  *** PUT UPDATE ***
-productRouter.post('/update/:id', productController.update);
+productRouter.put('/update/:id', productController.update);
 
 //  *** DELETE ***
-productRouter.post('/delete/:id', productController.delete);
+productRouter.delete('/delete/:id', productController.delete);
 
 
 module.exports = productRouter;

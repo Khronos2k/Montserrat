@@ -12,7 +12,7 @@
                         <h2>Editar: <%= productToEdit.name %></h2>
                         <div class="product-create-box__collumn-container">
                             <div class="product-create-box__collumn">
-                                <form method="POST" action="/product/update/<%= productToEdit.id %>">
+                                <form method="POST" action="/product/update/<%= productToEdit.id %>?_method=PUT">
                                     <input class="form-box__input" type="text" name="name" value="<%= productToEdit.name %>">
                                     <select class="form-box__input" name="type" id="">
                                         <option value="food">Comida</option>

@@ -15,6 +15,10 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookieParser());
+
+app.use((req,res, next) => {
+    res.status(404).render('not-found')
+})
 //  *Express: indicamos la utilización de template engine y la ubicación de las vistas - (don't modify)
 app.set('view engine', 'ejs')
 app.set('views', './src/views');

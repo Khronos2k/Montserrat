@@ -62,7 +62,7 @@
                         <button class="button button__product-panel" type="">Comprar ahora</button>
                         <button class="button button__product-panel" type="">Agregar al carro</button>
                         <a href="/product/update/<%= product.id%>" class="button button__product-panel button__product-panel--delete" type="">Modificar</a>
-                        <form action="/product/delete/<%= product.id %>" method="post">
+                        <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post">
                             <button type="submit" class="button button__product-panel button__product-panel--delete" type="">Eliminar</button>
                         </form>
                     </div>
