@@ -3,74 +3,66 @@
 >
 > In this guide you will find the conventions under which we work on this project.
 
-## Methodologies implemented
+## Metodología utilizada
 ### Conventional Commits
-¿Qué es Conventional Commits?
 
-Es una convención mediante la cual vamos a crear nuestros commits. De esta forma vamos a lograr que los mismos sean homogéneos.
+**Conventional commits** es un conjunto de normas mediante el cual vamos a crear nuestros commits. De esta forma lograremos que los mismos sean homogéneos y aporten la información necesaria.
 
 > [!IMPORTANT]
-> Instalar la extensión en tu VScode.
+> Para su implementación en VScode debemos instalar la extensión "Conventional Commits". Para ello simplemente debemos introducir su nombre en el buscador de extensiones y seleccionar la primer opción.
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/2d0ff622-2387-40c0-b96e-4128da096f25)
+Para usar conventional commits debemos seguir los siguientes pasos:
 
-¿Cómo se usa Conventional Commits?
+1. Primero, vamos a hacer la siguiente combinación de teclas ```CTRL``` + ```SHIFT``` + ```P```.
 
-Ejemplo práctico:
+    > [!NOTE]
+    > La forma en que esta extensión afecta a lo que normalmente veníamos haciendo por consola solo incide en la creación de los commits. Los demás pasos como, agregar los archivos al commit mediante ```git add``` o actualizar el repositorio local con ```git pull``` o el remoto con ```git push``` se mantienen.
 
-1. Supongamos que agregamos una nueva sección en el HOME de nuestro proyecto.
+2. A continuación se nos abrirá un panel en el que debemos introducir el nombre de nuestra extensión "conventional commits" y seleccionar el primer resultado que nos muestre.
 
-Normalmente iríamos a nuestro GitBash a introducir los comandos para agregar los archivos modificados, crear nuestro commit y finalmente hacer push.
+    ![Alt text](guideAdds/image-3.png)
 
-> [!NOTE]
-> Esto no quiere decir que ya no necesitemos la consola, la única acción que sustutuye es la de creación de commits.
+3. En caso de que estemos en una carpeta que contenga varios proyectos dentro, nos pedirá seleccionar el proyecto en el que estemos trabajando.
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/207216db-d08a-48b3-8066-5c41fd9a0c17)
+    ![Alt text](guideAdds/image-4.png)
 
-2. Ahora, lo que vamos a hacer en su lugar es introducir la siguiente convinación de teclas ```CTRL``` + ```SHIFT``` + ```P```.
+4. Una vez seleccionado nuestro proyecto, nos pedirá que indiquemos el tipo de cambio que realizamos. Estos cambios van desde los más complejos como modificaciones en el código, hasta los más simples como alterar la estructura de las carpetas.
+    
+    De igual forma, debajo de cada tipo de cambio encontraremos una breve descripción y debemos elegir aquella que mejor encaje con las modificaciones que hicimos.
 
-A continuación se nos abrirá un panel en el que debemos introducir el nombre de nuestra extensión "conventional commits" y clickear el resultado que nos muestre.
+    ![Alt text](guideAdds/image-5.png)
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/ced50688-7dbf-4525-9cd8-77f19ddf06ef)
+5. En el siguiente paso simplemente indicaremos la primer opción ```None```, debido a que, en nuestro caso, no será necesario su uso.
 
-3. Luego nos pedirá que seleccionemos el proyecto en el que estamos trabajando.
+    ![Alt text](guideAdds/image-6.png)
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/704df97d-73ea-47a1-a667-80b41cb9b215)
+6. Seguido de esto, nos ofrecerá agregar una insignia o emoji, cuyo significado también está definido por una convención llamada [gitm😚ji](https://gitmoji.dev/). En nuestro caso, haremos uso de estos en todos los casos, ya que aportará a nuestros commits muchísima mayor claridad.
 
-4. Al seleccionar nuestro poyecto, nos pedirá completar una seria de pasos que consisten en indicar el tipo de modificación que hicimos en el proyecto.
+    ![Alt text](guideAdds/image-7.png)
 
-* En esta primera estancia nos pregunta el tipo de cambio que realizamos en el proyecto. Estos van desde modificaciones en el código, agregar o quitar funcionalidades, hasta en cambios que se relacionan a la documentación del proyecto.
+7. A continuación, nos pedirá que agreguemos una descripción corta sobre el cambio que hicimos, algo así como el título de nuestro commit. Vendría siendo lo que habitualmente colocábamos entre corchetes cuando realizábamos los commits por consola ```git commit -m " "```
 
-* Lo que haremos será seleccionar el que más se adapte a la acción que llevamos a cabo. Que en este caso podría ser ```REFACTOR```.
+    ![Alt text](guideAdds/image-8.png)
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/ab67035c-5a95-41fe-81f2-e1d58a7ed0ea)
+8. Luego de esto, nos ofrecerá agregarle a nuestro commit una descripción larga o cuerpo, en donde nos podremos explayar todo lo que queramos.
 
-* Luego nos pedirá que agreguemos un emoji (OPCIONAL), los cuales tienen significados particulares en base al cambio que hicimos. Suponiendo que nuestra nueva sección en el home agrega una nueva funcionalidad, le damos en donde dice ```SPARKLES```.
+    ![Alt text](guideAdds/image-9.png)
 
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/ec854d0b-187e-4dc9-a9ac-f01a555358d2)
+9. Por último, nos permiirá insertar un pie de pagina a la descripción de nuestro commit. En él podremos dar créditos a colaboraciones hechas por otros integrantes del grupo o también indicar si el cambio fue testeado y aprobado(opcional).
 
-* A continuación, nos pedirá que agreguemos una descripción muy corta sobre lo que hicimos. 
-
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/5cd42660-4c4a-4d00-ae82-b5fe7629b4c1)
-
-* También nos permitirá añadir una descripción muchísimo más extensa.
-
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/5763e548-73d8-4cb8-8ce2-00f39d124232)
-* Adicional y opcional un píe de página.
-
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/0a8840ee-3b8d-4280-af04-36e1032838c9)
-
-* Y por último, en caso de que no hayamos hecho por consola un git add a los archivos modificados, nos preguntará si queremos realizar esta acción
-
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/76d1b9a6-42a5-4354-aaf9-b10095fb5c7b)
-
-* Como resultado final, obtendremos commits como este, que nos permitirán ver con mayor claridad el proceso de desarrollo.
-
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/295791a8-f0b0-4e87-a44b-2b54ae04a848)
-![image](https://github.com/Khronos2k/Montserrat/assets/108843074/9eb562ba-7f8a-4126-83d6-bc7f85572fbb)
+    ![Alt text](guideAdds/image-10.png)
 
 
-## Metodología B-E-M
+    Como resultado final, obtendremos commits como este, que nos permitirán ver con mayor claridad el proceso de desarrollo.
+
+    ![Alt text](guideAdds/image.png)
+
+    Y los detalles adicionales que introducimos se verán de esta fomra
+
+    ![Alt text](guideAdds/image-1.png)
+
+
+### Metodología B-E-M
 BEM, cuyo significado es **B**lock **E**lement **M**omdifier, nos permitirá mantener una estructura ordenada para trabajar con nuestras clases en HTML.
 
 
