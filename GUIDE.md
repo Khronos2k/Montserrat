@@ -48,7 +48,7 @@ Para usar conventional commits debemos seguir los siguientes pasos:
 
     ![Alt text](guideAdds/image-9.png)
 
-9. Por último, nos permiirá insertar un pie de pagina a la descripción de nuestro commit. En él podremos dar créditos a colaboraciones hechas por otros integrantes del grupo o también indicar si el cambio fue testeado y aprobado(opcional).
+9. Por último, nos permitirá insertar un pie de pagina a la descripción de nuestro commit. En él podremos dar créditos a colaboraciones hechas por otros integrantes del grupo o también indicar si el cambio fue testeado y aprobado(opcional).
 
     ![Alt text](guideAdds/image-10.png)
 
@@ -57,7 +57,7 @@ Para usar conventional commits debemos seguir los siguientes pasos:
 
     ![Alt text](guideAdds/image.png)
 
-    Y los detalles adicionales que introducimos se verán de esta fomra
+    Y los detalles adicionales que introdujimos se verán de esta fomra
 
     ![Alt text](guideAdds/image-1.png)
 
