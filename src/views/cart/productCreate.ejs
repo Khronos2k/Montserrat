@@ -12,7 +12,7 @@
                         <h2>Crear producto</h2>
                         <div class="product-create-box__collumn-container">
                             <div class="product-create-box__collumn">
-                                <form action="/product" method="post" >
+                                <form action="/product" method="post" enctype="multipart/form-data">
                                     <input class="form-box__input" type="text" name="name" placeholder="Nombre">
                                     <select class="form-box__input" name="type" id="">
                                         <option value="food">Comida</option>
@@ -23,7 +23,8 @@
                                     <input class="form-box__input" type="number" name="discount" id="" placeholder="Descuento">
                                     <input class="form-box__input" type="text" name="category" id="" placeholder="Category">
                                     
-                                    <input class="form-box__input" type="file" name="image" id="" accept=".jpg" multiple>
+                                    <!-- file -->
+                                    <input class="form-box__input" type="file" name="productImage" id="" multiple>
 
                                     <button class="button" type="submit">Crear</button>
                                 </form>

@@ -12,7 +12,7 @@
                         <h2>Editar: <%= productToEdit.name %></h2>
                         <div class="product-create-box__collumn-container">
                             <div class="product-create-box__collumn">
-                                <form method="POST" action="/product/update/<%= productToEdit.id %>?_method=PUT">
+                                <form method="POST" action="/product/update/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data">
                                     <input class="form-box__input" type="text" name="name" value="<%= productToEdit.name %>">
                                     <select class="form-box__input" name="type" id="">
                                         <option value="food">Comida</option>
@@ -23,7 +23,7 @@
                                     <input class="form-box__input" type="number" name="discount" id="" value="<%= productToEdit.discount %>">
                                     <input class="form-box__input" type="text" name="category" id="" value="<%= productToEdit.category %>">
                                     
-                                    <input class="form-box__input" type="file" name="image" id="" accept=".jpg" multiple>
+                                    <input class="form-box__input" type="file" name="productImage" id="" value="<%= productToEdit.image %>" multiple>
 
                                     <button class="button" type="submit">Modificar</button>
                                 </form>

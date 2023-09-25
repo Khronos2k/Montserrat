@@ -7,8 +7,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 //  *** Expresión regular ***
 const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-// console.log(products);
-
 const productController = {
     index: (req, res) => {
         res.render('cart/products', {products, toThousend})
@@ -19,7 +17,6 @@ const productController = {
     showProductDetails: (req,res) => {
         const id = req.params.id;
         const product = products.find(item => item.id == id);
-        // console.log(product);
         res.render('cart/productDetail', {product, toThousend});
     },
     edit: (req, res) => {
@@ -31,13 +28,14 @@ const productController = {
         const id = req.params.id;
         const editProduct = req.body;
         const index = products.findIndex(product => product.id == id);
-        
+
         products[index].name = editProduct.name;
         products[index].type = editProduct.type;
         products[index].price = editProduct.price;
         products[index].discount = editProduct.discount;
         products[index].category = editProduct.category;
-        products[index].image = editProduct.image;
+        // products[index].image = editProduct.image;
+        products[index].image = req.file.filename;
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect("/product");
@@ -55,12 +53,12 @@ const productController = {
 
     create: (req, res) => {
         res.render('cart/productCreate');
-
     },
     store: (req, res) => {
         const data = req.body;
         // res.send(data)
-        
+        // console.log(req.file);
+
         const index = products[products.length -1].id;
         console.log(index)
         const newProduct = {
@@ -70,7 +68,7 @@ const productController = {
             price: data.price,
             discount: data.discount,
             category: data.category,
-            image: "/images/products/default-image.png",
+            image: req.file.filename,
         };
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
