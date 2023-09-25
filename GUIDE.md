@@ -144,10 +144,10 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     > Antes de seguir adelante, podemos verificar que este paso se haya concretado correctamente.
     >
     > Para ello podemos utilizar el comando ```git branch```
-    >
-    >![Alt text](guideAdds/image12.png)
-
-2. Lo siguiente que vamos a hacer es movernos de la rama principal ```main``` a nuestra nueva rama que, en este caso, denominamos ```feature```.
+    
+    ![Alt text](guideAdds/image12.png)
+   
+3. Lo siguiente que vamos a hacer es movernos de la rama principal ```main``` a nuestra nueva rama que, en este caso, denominamos ```feature```.
 
     Para ello vamos a utilizar el comando ```git checkout``` + ```name```, es decir ```git checkout feature```
 
@@ -158,9 +158,9 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >
     > Para ello podemos utilizar, nuevamente, el comando ```git branch```
     >
-    >![Alt text](guideAdds/image14.png)
-    >
     > Como podemos observa en la imagen, nos señalan nuestra ubicación con un aspecto diferente sobre el nombre de la ramma en la que estamos.
+    
+    ![Alt text](guideAdds/image14.png)
 
     Hasta este punto no observaremos nada diferente en nuestro código o carpetas del proyecto. Pero lo que acabamos de hacer es una copia local de todo el proyecto y, al estar ubicados en la nueva rama, cada cambio o agregado que hagamos estarán siendo sobre la copia.
 
@@ -176,12 +176,12 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
     > [!NOTE]
     > Algo curioso que pasa cuando trabajamos con una rama paralela al main, es que cuando volvemos a ubicarnos en la rama principal utilizando ```git checkout main``` y vamos a los achivos que modificamos en nuestra rama alterna, nos encontraremos con que los cambios que hicimos no se muestran en el proyecto. Como ejemplo el archivo 404.ejs que se muestra completo en la imagen anterior.
-    >
-    > ![Alt text](guideAdds/image18.png)
+    
+    ![Alt text](guideAdds/image18.png)
 
     Una vez hayas añadido tu primer commit de las modificaciones o agregados que hiciste al proyecto, aún si la funcionalidad como tal no está completada en su totalidad, puedes avanzar al siguiente paso.
 
-3. Lo que debemos hacer ahora por una cuestión de seguridad, ya que nuestro progreso va a estar muchísimo más seguro en la nube es, subir a nuestro repositorio de GitHub nuestra nueva rama con sus respectivos commits. 
+4. Lo que debemos hacer ahora por una cuestión de seguridad, ya que nuestro progreso va a estar muchísimo más seguro en la nube es, subir a nuestro repositorio de GitHub nuestra nueva rama con sus respectivos commits. 
 
     Esto lo haremos utilizando el comando  ```git push origin``` + ```newNameBranch```, es decir ```git push origin feature```
 
