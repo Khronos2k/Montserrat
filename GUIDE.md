@@ -127,7 +127,7 @@ Ejemplo de Elementos:
 */
 ```
 
-## Branchs
+## Branches
 
 Las **Branchs** o **ramas** nos permite trabajar de forma más ordenada y que no estemos constantemente modificando la rama principal, es decir, nuestro main.
 
@@ -166,10 +166,30 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
     Así que ya tenemos un nuevo entorno sobre el cual trabajar como lo venimos haciendo habitualmente pero de forma paralela. Esto quiere decir que podemos seguir creando commits de los cambios que hagamos en esta nueva rama, lo cual es muy importante que se haga.
 
-    Una vez hayas añadido tu primer commit de las modificaciones o agregados que hiciste, aún si la funcionalidad como tal, no está completada en su totalidad, puedes avanzar al siguiente paso. 
+    **A continuación un ejemplo práctico:**
+
+    Supongamos que la rama que creamos fue para insertar la página de error 404.
+
+    ![Alt text](guideAdds/image15.png)
+
+    Hecho este cambio, vamos a crear el commit con [conventional commit](#conventional-commits).
+
+    > [!NOTE]
+    > Algo curioso que pasa cuando trabajamos con una rama paralela al main, es que cuando volvemos a ubicarnos en la rama principal utilizando ```git checkout main``` y vamos a los achivos que modificamos en nuestra rama alterna, nos encontraremos con que los cambios que hicimos no se muestran en el proyecto. Como ejemplo el archivo 404.ejs que se muestra completo en la imagen anterior.
+    >
+    > ![Alt text](guideAdds/image18.png)
+
+    Una vez hayas añadido tu primer commit de las modificaciones o agregados que hiciste al proyecto, aún si la funcionalidad como tal no está completada en su totalidad, puedes avanzar al siguiente paso.
 
 3. Lo que debemos hacer ahora por una cuestión de seguridad, ya que nuestro progreso va a estar muchísimo más seguro en la nube es, subir a nuestro repositorio de GitHub nuestra nueva rama con sus respectivos commits. 
 
     Esto lo haremos utilizando el comando  ```git push origin``` + ```newNameBranch```, es decir ```git push origin feature```
 
-     
+    ![Alt text](guideAdds/image17.png)
+
+    Lo que obtendremos como resultado será lo siguiente:
+
+    ![Alt text](guideAdds/image16.png)
+
+    Señalado con un cuadro rojo, veremos la confirmación de que se ha creado una rama en nuestro repositorio remoto y que el commit se subió con éxito
+
