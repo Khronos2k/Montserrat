@@ -114,6 +114,7 @@ Ejemplo de Elementos:
 </div>
 ```
 * Modificador/Modifier: para elementos que tengan declaraciones de CSS diferentes al resto pero que compartan propiedades. Por ejemplo: puede tratarse de dos botones que comparten tamaño, font, padding, etc. Pero que necesites hacer que uno tenga su background de color rojo y otro de color verde.
+
 ```html
 <div class="block">
     <div class="block__element">
@@ -125,3 +126,50 @@ Ejemplo de Elementos:
 </div>
 */
 ```
+
+## Branchs
+
+Las **Branchs** o **ramas** nos permite trabajar de forma más ordenada y que no estemos constantemente modificando la rama principal, es decir, nuestro main.
+
+Para trabajar con ellas, debemos seguir los siguientes pasos:
+
+> [!IMPORTANT]
+> Antes de comenzar, procurá tener la última versión estable del proyecto  ```git pull origin main```.
+
+1. Primero, vamos a crear una nueva rama introduciendo por consola el comando ```git branch``` + ```name```. En el caso de que vayamos a añadir una nueva funcionalidad quedaría algo así ```git branch feature```
+
+    ![Alt text](guideAdds/image11.png)
+
+    > [!NOTE]
+    > Antes de seguir adelante, podemos verificar que este paso se haya concretado correctamente.
+    >
+    > Para ello podemos utilizar el comando ```git branch```
+    >
+    > ![Alt text](guideAdds/image12.png)
+
+2. Lo siguiente que vamos a hacer es movernos de la rama principal ```main``` a nuestra nueva rama que, en este caso, denominamos ```feature```.
+
+    Para ello vamos a utilizar el comando ```git checkout``` + ```name```, es decir ```git checkout feature```
+
+    ![Alt text](guideAdds/image13.png)
+
+    > [!NOTE]
+    > Antes de seguir adelante, podemos verificar que este paso se haya concretado correctamente.
+    >
+    > Para ello podemos utilizar, nuevamente, el comando ```git branch```
+    >
+    > ![Alt text](guideAdds/image14.png)
+    >
+    > Como podemos observa en la imagen, nos señalan nuestra ubicación con un aspecto diferente sobre el nombre de la ramma en la que estamos.
+
+    Hasta este punto no observaremos nada diferente en nuestro código o carpetas del proyecto. Pero lo que acabamos de hacer es una copia local de todo el proyecto y, al estar ubicados en la nueva rama, cada cambio o agregado que hagamos estarán siendo sobre la copia.
+
+    Así que ya tenemos un nuevo entorno sobre el cual trabajar como lo venimos haciendo habitualmente pero de forma paralela. Esto quiere decir que podemos seguir creando commits de los cambios que hagamos en esta nueva rama, lo cual es muy importante que se haga.
+
+    Una vez hayas añadido tu primer commit de las modificaciones o agregados que hiciste, aún si la funcionalidad como tal, no está completada en su totalidad, puedes avanzar al siguiente paso. 
+
+3. Lo que debemos hacer ahora por una cuestión de seguridad, ya que nuestro progreso va a estar muchísimo más seguro en la nube es, subir a nuestro repositorio de GitHub nuestra nueva rama con sus respectivos commits. 
+
+    Esto lo haremos utilizando el comando  ```git push origin``` + ```newNameBranch```, es decir ```git push origin feature```
+
+     
