@@ -134,7 +134,7 @@ Las **Branchs** o **ramas** nos permite trabajar de forma más ordenada y que no
 Para trabajar con ellas, debemos seguir los siguientes pasos:
 
 > [!IMPORTANT]
-> Antes de comenzar, procurá tener la última versión estable del proyecto  ```git pull origin main```.
+> Antes de comenzar, procurá tener la última versión estable del proyecto introduciendo por consola el comando  ```git pull origin main```.
 
 1. Primero, vamos a crear una nueva rama introduciendo por consola el comando ```git branch``` + ```name```. En el caso de que vayamos a añadir una nueva funcionalidad quedaría algo así ```git branch feature```
 
@@ -145,7 +145,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >
     > Para ello podemos utilizar el comando ```git branch```
     >
-    > ![Alt text](guideAdds/image12.png)
+    >![Alt text](guideAdds/image12.png)
 
 2. Lo siguiente que vamos a hacer es movernos de la rama principal ```main``` a nuestra nueva rama que, en este caso, denominamos ```feature```.
 
@@ -158,7 +158,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >
     > Para ello podemos utilizar, nuevamente, el comando ```git branch```
     >
-    > ![Alt text](guideAdds/image14.png)
+    >![Alt text](guideAdds/image14.png)
     >
     > Como podemos observa en la imagen, nos señalan nuestra ubicación con un aspecto diferente sobre el nombre de la ramma en la que estamos.
 
