@@ -160,7 +160,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >
     >![Alt text](guideAdds/image14.png)
     >
-    > Como podemos observa en la imagen, nos señalan nuestra ubicación con un aspecto diferente sobre el nombre de la ramma en la que estamos.
+    > Como podemos observa en la imagen, nos señalan nuestra ubicación con un aspecto diferente sobre el nombre de la rama en la que estamos.
 
     Hasta este punto no observaremos nada diferente en nuestro código o carpetas del proyecto. Pero lo que acabamos de hacer es una copia local de todo el proyecto y, al estar ubicados en la nueva rama, cada cambio o agregado que hagamos estarán siendo sobre la copia.
 
@@ -191,5 +191,10 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
     ![Alt text](guideAdds/image16.png)
 
-    Señalado con un cuadro rojo, veremos la confirmación de que se ha creado una rama en nuestro repositorio remoto y que el commit se subió con éxito
+    Señalado con un cuadro rojo, veremos la confirmación de que se ha creado una rama en nuestro repositorio remoto y que el commit se subió con éxito.
 
+    Y lo que obtendremos en nuesro repositorio en GitHub será lo siguiente.
+
+    ![Alt text](guideAdds/image19.png)
+
+    ![Alt text](guideAdds/image20.png)
