@@ -9,20 +9,20 @@ const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
     index: (req, res) => {
-        res.render('cart/products', {products, toThousend})
+        res.render('cart/products', { products, toThousend })
     },
     showProductCart: (req, res) => {
         res.render('cart/productCart')
     },
-    showProductDetails: (req,res) => {
+    showProductDetails: (req, res) => {
         const id = req.params.id;
         const product = products.find(item => item.id == id);
-        res.render('cart/productDetail', {product, toThousend});
+        res.render('cart/productDetail', { product, toThousend });
     },
     edit: (req, res) => {
         const id = req.params.id;
         const product = products.find(item => item.id == id);
-        res.render('cart/productUpdate', {productToEdit: product});
+        res.render('cart/productUpdate', { productToEdit: product });
     },
     update: (req, res) => {
         const id = req.params.id;
@@ -45,8 +45,8 @@ const productController = {
         const id = req.params.id;
         // const index = products.findIndex(product => product.id == id);
         // console.log(index);
-        const leftProducts = products.filter((product)=>product.id != id);
-        
+        const leftProducts = products.filter((product) => product.id != id);
+
         fs.writeFileSync(productsFilePath, JSON.stringify(leftProducts));
         res.redirect("/product");
     },
@@ -59,7 +59,7 @@ const productController = {
         // res.send(data)
         // console.log(req.file);
 
-        const index = products[products.length -1].id;
+        const index = products[products.length - 1].id;
         console.log(index)
         const newProduct = {
             id: index + 1,
