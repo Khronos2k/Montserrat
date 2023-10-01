@@ -56,9 +56,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 130px;
     padding: 12px 12px;
     border-radius: 50px;
+    margin: auto;
     border: none;
     background: var(--action-color-off);
     box-shadow: var(--box-shadow-default--button-color);
@@ -407,10 +409,9 @@ body {
 }
 .product-view__image {
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 25px;
     width: 100%;
     height: 100%;
-    box-shadow: var(--box-shadow-default--reduct);
 }
 .column-product-information {
     flex-grow: 1;
@@ -503,45 +504,48 @@ body {
 }
 
 
-/*B>LOGIN-REGISTER------------------*/
+/****FORMS:LOGIN&REGISTER****/
 .container--form {
+    justify-content: center;
+    align-items: center;
+    
     height: 100vh;
 }
 .form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-    padding: 40px 0;
-}
-.form-box {
-    display: flex;
+    /* justify-content: center;
+    align-items: center; */
     flex-direction: column;
-    
+
     width: 350px;
     height: fit-content;
-    padding: 40px;
-
-    /* background: var(--box-color-default);
-    box-shadow: var(--box-shadow-default); */
+    padding: 40px 0;
 }
-.form-box__title {
+.form--wide {
+    width: 100%;
+}
+.form__head {
     margin: 0 0 20px 0;
     
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-
+    
     color: var(--font-primary-color);
 }
-.form-box__form {
-    width: 100%;
+.form__footer {
+    display: block;
 }
-.form-box__input {
-    margin: 10px 0;
+.form__form-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form__item {
+    width: 100%;
+    padding: 20px;
+}
+.form__input {
     width: 100%;
     padding: 8px;
     border: 2px solid rgba(100,100,100, 0);
@@ -557,7 +561,43 @@ body {
 }
 .form-box__input:hover {
     border: 2px solid var(--action-color-on);
+} 
+.form-box__input--file{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
+.form-box__input--file + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+.form-box__input--file + label svg{
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background: var(--box-color-default);
+    box-shadow: var(--box-shadow-default);
+}
+
 
 .form-box__a {
     color: var(--action-color-off);
@@ -591,33 +631,33 @@ body {
 }
 
 
-/*B>CART---------------------------*/
-.container--product-create {
-    height: 100vh;
-}
-
+/****   PRODUCT-CREATE  ****/
 .product-create {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     padding: 40px 0;
 }
-.product-create-box {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    padding: 16px;
-    background: var(--box-color-default);
-    box-shadow: var(--box-shadow-default);
-}
-.product-create-box__collumn-container {
+
+/****   TOOLS-PANEL   ****/
+.tools-panel{
+    cursor: pointer;
     display: flex;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--action-color-off);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    box-shadow: var(--box-shadow-default--button-color);
 }
-.product-create-box__collumn {
-    flex-grow: 1;
-    height: 100%;
-}
+
+
 
 /* Móvil */
 @media (min-width: 480px) {
@@ -701,5 +741,12 @@ body {
     .product-panel {
         margin-left: 30px;
         width: 30%;
+    }
+
+    .form__item {
+        width: 25%;
+    }
+    .form__footer {
+        width: 100%;
     }
 }
