@@ -1,1 +1,38 @@
-[{"id":2,"name":"ensalada shopka tradicional bulgara pepino queso sirene bulgaro","type":"food","price":"1200","discount":"10","category":"Oferta!","image":"products_1695425568553.jpg"},{"id":3,"name":"pizza suprema tradicional","type":"food","price":"1300","discount":"10","category":"Oferta!","image":"products_1695425653119.jpg"},{"id":4,"name":"tortilla con chips, nachos mexicanos, frijoles negros guacamole tomate jalapeño","type":"food","price":"1200","discount":"5","category":"Oferta!","image":"products_1695425741180.jpg"},{"id":5,"name":"prueba 2","type":"food","price":"400","discount":"5","category":"Oferta!","image":"products_1695428728988.jpg"}]
+[
+    {
+        "id": 2,
+        "name": "ensalada shopka tradicional bulgara pepino queso sirene bulgaro",
+        "type": "food",
+        "price": "1200",
+        "discount": "10",
+        "category": "Oferta!",
+        "image": "products_1695425568553.jpg"
+    },
+    {
+        "id": 3,
+        "name": "pizza suprema tradicional",
+        "type": "food",
+        "price": "1300",
+        "discount": "10",
+        "category": "Oferta!",
+        "image": "products_1695425653119.jpg"
+    },
+    {
+        "id": 4,
+        "name": "tortilla con chips, nachos mexicanos, frijoles negros guacamole tomate jalapeño",
+        "type": "food",
+        "price": "1200",
+        "discount": "5",
+        "category": "Oferta!",
+        "image": "products_1695425741180.jpg"
+    },
+    {
+        "id": 5,
+        "name": "prueba 2",
+        "type": "food",
+        "price": "400",
+        "discount": "5",
+        "category": "Oferta!",
+        "image": "products_1695428728988.jpg"
+    }
+]
