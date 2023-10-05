@@ -6,33 +6,45 @@
     <%- include('../partials/header.ejs') %>
     <main class="main">
         <div>
-            <section class="container container--product-create">
-                <div class="product-create">
-                    <div class="product-create-box">
-                        <h2>Crear producto</h2>
-                        <div class="product-create-box__collumn-container">
-                            <div class="product-create-box__collumn">
-                                <form action="/product" method="post" enctype="multipart/form-data">
-                                    <input class="form-box__input" type="text" name="name" placeholder="Nombre">
-                                    <select class="form-box__input" name="type" id="">
-                                        <option value="food">Comida</option>
-                                        <option value="drink">Bebida</option>
-                                        <option value="dessert">Postre</option>
-                                    </select>
-                                    <input class="form-box__input" type="number" name="price" id="" placeholder="Precio">
-                                    <input class="form-box__input" type="number" name="discount" id="" placeholder="Descuento">
-                                    <input class="form-box__input" type="text" name="category" id="" placeholder="Category">
-                                    
-                                    <!-- file -->
-                                    <input class="form-box__input" type="file" name="productImage" id="" multiple>
-
-                                    <button class="button" type="submit">Crear</button>
-                                </form>
-                            </div>
-                            <!-- <div class="product-create-box__collumn"></div> -->
-                            <div class="product-create-box__collumn"></div>
-                        </div>
+            <section class="container container-fit">
+                <div class="form form--wide">
+                    <div>
+                        <h2 class="form__head">Crear producto</h2>
                     </div>
+                    <form class="form__form-items" action="/product" method="post" enctype="multipart/form-data">
+                        <div class="form__form-items-column">
+                            <div class="form__item">
+                                <input class="form__input" type="text" name="name" placeholder="Nombre">
+                            </div>
+                            <div class="form__item">
+                                <select class="form__input" name="type" id="">
+                                    <option value="food">Comida</option>
+                                    <option value="drink">Bebida</option>
+                                    <option value="dessert">Postre</option>
+                                </select>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" type="number" name="price" id="" placeholder="Precio">
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" type="number" name="discount" id="" placeholder="Descuento">
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" type="text" name="category" id="" placeholder="Category">
+                            </div>
+                        </div>
+                        <!-- file -->
+                        <div class="form__form-items-column form__form-items-column--right">
+                            <input class="form__input-file" type="file" name="productImage" id="productImage" multiple>
+                            <label for="productImage">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span class="iborrainputfile">Seleccionar archivo</span>
+                            </label>
+                        </div>
+                        <div class="form__footer">
+                            <button class="button" type="submit">Crear</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>

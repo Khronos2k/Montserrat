@@ -6,33 +6,31 @@
     <%- include('../partials/header.ejs') %>
     <main class="main">
         <div>
-            <section class="container container--form">
+            <section class="container container-vh">
                 <div class="form">
-                    <div class="form-box">
-                        <h1 class="form-box__title">Inicio de sesión</h1>
-                        <form class="form-box__form" action="/login" method="post">
-                            <div class="">
-                                <!-- <label for="email">correo electrónico o nombre de usuario</label> -->
-                                <input type="text" name="email" placeholder="E-mail / Username" class="form-box__input">
-                            </div>
-                            <div class="">
-                                <!-- <label for="constraseña">contraseña</label> -->
-                                <input type="password" name="constraseña" placeholder="Password" class="form-box__input">
-                                <div><a class="form-box__a" href="">¿Olvidaste tu contraseña?</a></div>
-                            </div>
-                            <div class="form-box__button-container">
-                                <button class="button"><i class="button__i fa-solid fa-arrow-right-to-bracket"></i>Entrar</button>
-                            </div>
-                        </form>
-                        <div class="form-box__br-container">
-                            <div class="form-box__br"><hr></div>
-                            <span>o</span>
-                            <div class="form-box__br"><hr></div>
+                    <div>
+                        <h2 class="form__head">Inicio de sesión</h2>
+                    </div>
+                    <form class="form__form-items" action="/login" method="post">
+                        <div class="form__item form__item--column">
+                            <input type="text" name="email" placeholder="E-mail / Username" class="form__input ">
                         </div>
-                        <div class="form-box__button-container">
+                        <div class="form__item form__item--column">
+                            <input type="password" name="constraseña" placeholder="Password" class="form__input">
+                        </div>
+                        <div class="form__item form__item--column">
+                            <a class="form-box__a" href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <div class="form__footer">
+                            <button class="button"><i class="button__i fa-solid fa-arrow-right-to-bracket"></i>Entrar</button>
+                            <div class="form-box__br-container">
+                                <div class="form-box__br"><hr></div>
+                                <span>o</span>
+                                <div class="form-box__br"><hr></div>
+                            </div>
                             <a class="button" href="/user/register">Registrarme</a>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </section>
         </div>

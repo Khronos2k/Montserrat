@@ -36,7 +36,7 @@
                             <%products.map(item => {%>
                             <li class="product-card">
                                 <a href="/product/details/<%= item.id%>" class="product-card__cont-img">
-                                    <img class="product-card__img" alt="" src="/images/products/<%= item.image %>">
+                                    <img class="product-card__img" alt="" src="/images/products/<%= item.image ? item.image : 'default.png' %>">
                                 </a>
                                 <div class="product-card__cont-information">
                                     <div class="product-card__cont">

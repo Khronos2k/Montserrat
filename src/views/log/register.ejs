@@ -6,45 +6,44 @@
     <%- include('../partials/header.ejs') %>
     <main class="main">
         <div>
-            <section class="container container--form">
-                <div class="form">
-                    <div class="form-box">
-                        <h1 class="form-box__title">Regístrate</h1>
-                        <form class="form-box__form" action="">
-                            <!-- <div class="form__item">
-                                <label for="foto"></label>
-                                <input class="form__item-input" type="file" name="foto de usuario" id="foto" accept=".jpg" required>
-                            </div> -->
-                            <div>
-                                <!-- <label for="Nombre y Apellido">Nombre y Apellido</label> -->
-                                <input class="form-box__input" placeholder="Name" type="text" name="Nombre y Apellido" id="Nombre y Apellido" required>
-                            </div>
-                            <div>
-                                <!-- <label for="Nombre y Apellido">Nombre y Apellido</label> -->
-                                <input class="form-box__input" placeholder="Last Name" type="text" name="Nombre y Apellido" id="Nombre y Apellido" required>
-                            </div>
-                            <div>
-                                <!-- <label for="usuario">Usuario</label> -->
-                                <input class="form-box__input" placeholder="User name" type="text" name="Nombre y Apellido" id="usuario" required>
-                            </div>
-                            <div>
-                                <!-- <label for="email">E-mail</label> -->
-                                <input class="form-box__input" placeholder="Email" type="email" name="E-mail" id="email" required>
-                            </div>
-                            <div>
-                                <!-- <label for="contraseña">Contraseña</label> -->
-                                <input class="form-box__input" placeholder="Password" type="password" name="contraseña" id="contraseña" required>
-                            </div>
-                            <div>
-                                <!-- <label for="confirmacion">Confirmar contraseña</label> -->
-                                <input class="form-box__input" placeholder="Confirm Password" type="password" name="confirmacion" id="confirmacion" required>
-                            </div>
-                            <div class="form-box__button-container form-box__button-container--space">
-                                <button class="button" type="reset">Cancelar</button>
-                                <button class="button" type="submit">Enviar</button>
-                            </div>
-                        </form>
+            <section class="container container-fit">
+                <div class="form form--wide">
+                    <div>
+                        <h1 class="form__head">Registo de usuario</h1>
                     </div>
+                    <form class="form__form-items" action="">
+                        <div class="form__form-items-column">
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Name" type="text" name="Nombre" id="Nombre" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Last Name" type="text" name="Apellido" id="Apellido" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="User name" type="text" name="Nombre y Apellido" id="usuario" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Email" type="email" name="E-mail" id="email" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Password" type="password" name="contraseña" id="contraseña" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Confirm Password" type="password" name="confirmacion" id="confirmacion" required>
+                            </div>
+                        </div>
+                        <div class="form__form-items-column form__form-items-column--right">
+                            <input class="form__input-file" type="file" name="productImage" id="productImage" multiple>
+                            <label for="productImage">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span class="iborrainputfile">Seleccionar archivo</span>
+                            </label>
+                        </div>
+                        <div class="form__footer">
+                            <button class="button" type="reset">Cancelar</button>
+                            <button class="button" type="submit">Aceptar</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
