@@ -4,7 +4,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json')
 
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-//  *** Expresión regular ***
+//  ****    Expresión regular   ****
 const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
@@ -56,11 +56,9 @@ const productController = {
     },
     store: (req, res) => {
         const data = req.body;
-        // res.send(data)
-        // console.log(req.file);
 
         const index = products[products.length -1].id;
-        console.log(index)
+        
         const newProduct = {
             id: index + 1,
             name: data.name,
@@ -72,7 +70,7 @@ const productController = {
         };
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.redirect("/product");;
+        res.redirect("/product");
     }
 }
 module.exports = productController;

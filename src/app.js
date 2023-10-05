@@ -10,8 +10,11 @@ app.use(methodOverride('_method'));
 const cookieParser = require('cookie-parser');
 //  *Express: ubicación de los archivos de imagenes & estilos - (don't modify)
 const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath));
-//--
+
+//  **** Middlewares ****
+
+
+app.use(express.static(publicPath));  
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookieParser());

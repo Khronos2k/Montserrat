@@ -1,11 +1,12 @@
 const express = require('express');
 const productRouter = express.Router();
 const path = require('path');
-// **** Multer ****
+//  **** Multer ****
 const multer = require('multer');
-// **** Controllers ****
+//  **** Controllers ****
 const productController = require('../controllers/productController');
 
+//  **** Multer Configuration ****
 const storage = multer.diskStorage({
     destination: (req, file, cd) => {
         cd(null, './public/images/products');
@@ -17,23 +18,24 @@ const storage = multer.diskStorage({
 });
 const uploadFile = multer({storage});
 
-//  *** GET PRODUCT-LIST ***
+//  ****    GET:PRODUCT-LIST    ****
 productRouter.get('/', productController.index);
-//  *** CREATE ***
-productRouter.get('/create', productController.create);
-productRouter.post('/', uploadFile.single('productImage'), productController.store);
-//  *** GET CART-LIST ***
+//  ****    GET:PRODUCT-CART    ****
 productRouter.get('/cart', productController.showProductCart);
-
-//  *** GET PRODUCT ***
+//  ****    GET:PRODUCT-DETAIL    ****
 productRouter.get('/details/:id', productController.showProductDetails);
 
-//  *** GET EDIT FORM ***
-productRouter.get('/update/:id', productController.edit);
-//  *** PUT UPDATE ***
-productRouter.put('/update/:id',uploadFile.single('productImage'), productController.update);
+//  ****    GET:PRODUCT-CREATE    ****
+productRouter.get('/create', productController.create);
+//  ****    POST:PRODUCT-STORE
+productRouter.post('/', uploadFile.single('productImage'), productController.store);
 
-//  *** DELETE ***
+//  ****    GET:PRODUCT-EDIT    ****
+productRouter.get('/update/:id', productController.edit);
+//  ****    PUT:PRODUCT-UPDATE    ****
+productRouter.put('/update/:id', uploadFile.single('productImage'), productController.update);
+
+//  ****    DELETE    ****
 productRouter.delete('/delete/:id', productController.delete);
 
 
