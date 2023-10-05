@@ -6,31 +6,43 @@
     <%- include('../partials/header.ejs') %>
     <main class="main">
         <div>
-            <section class="container container--product-create">
-                <div class="product-create">
-                    <div class="product-create-box">
-                        <h2>Editar: <%= productToEdit.name %></h2>
-                        <div class="product-create-box__collumn-container">
-                            <div class="product-create-box__collumn">
-                                <form method="POST" action="/product/update/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data">
-                                    <input class="form-box__input" type="text" name="name" value="<%= productToEdit.name %>">
-                                    <select class="form-box__input" name="type" id="">
+            <section class="container container-fit">
+                <div class="form form--wide">
+                    <h2 class="form__head">Editar: <%= productToEdit.name %></h2>
+                    <div class="product-create-box__collumn-container">
+                        <form class="form__form-items" action="/product/update/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <div class="form__form-items-column">
+                                <div class="form__item">
+                                    <input class="form__input" type="text" name="name" value="<%= productToEdit.name %>">
+                                </div>
+                                <div class="form__item">
+                                    <select class="form__input" name="type" id="">
                                         <option value="food">Comida</option>
                                         <option value="drink">Bebida</option>
                                         <option value="dessert">Postre</option>
                                     </select>
-                                    <input class="form-box__input" type="number" name="price" id="" value="<%= productToEdit.price %>">
-                                    <input class="form-box__input" type="number" name="discount" id="" value="<%= productToEdit.discount %>">
-                                    <input class="form-box__input" type="text" name="category" id="" value="<%= productToEdit.category %>">
-                                    
-                                    <input class="form-box__input" type="file" name="productImage" id="" value="<%= productToEdit.image %>" multiple>
-
-                                    <button class="button" type="submit">Modificar</button>
-                                </form>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="number" name="price" id="" value="<%= productToEdit.price %>">
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="number" name="discount" id="" value="<%= productToEdit.discount %>">
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" name="category" id="" value="<%= productToEdit.category %>">
+                                </div>
                             </div>
-                            <!-- <div class="product-create-box__collumn"></div> -->
-                            <div class="product-create-box__collumn"></div>
-                        </div>
+                            <div class="form__form-items-column--right">
+                                <input class="form__input-file" type="file" name="productImage" id="productImage" multiple>
+                                <label for="productImage">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <span class="iborrainputfile">Seleccionar archivo</span>
+                                </label>
+                            </div>
+                            <div class="form__footer">
+                                <button class="button" type="submit">Modificar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
