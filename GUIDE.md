@@ -196,3 +196,27 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     ![Alt text](guideAdds/image19.png)
 
     ![Alt text](guideAdds/image20.png)
+
+## Express
+
+### Express-Validator
+
+1. Primero debemos instalar ```express-validator```
+
+```
+npm install express-validator
+```
+
+> [!NOTE]
+> Antes de empezar con la validación, es importante tener en cuenta cómo están armados nuestros formularios. A la hora de escribir las validaciones, tomaremos como referencia la propiedad ```name``` de cada campo.
+>```html
+><form action ="/register" method="post">
+>   <label for="name">NOMBRE:</label>
+>   <input type="text" name="name" id="name">
+>   <label for="email">CORREO ELECTRONICO:</label>
+>   <input type="email" name="email" id="email">
+>   <label for="password">NOMBRE:</label>
+>   <input type="password" name="password" id="password">
+>   <button type="submit">Registrarse</button>
+></form>
+>```
