@@ -203,20 +203,104 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
 1. Primero debemos instalar ```express-validator```
 
-```
-npm install express-validator
-```
+    ```
+    npm install express-validator
+    ```
 
-> [!NOTE]
-> Antes de empezar con la validación, es importante tener en cuenta cómo están armados nuestros formularios. A la hora de escribir las validaciones, tomaremos como referencia la propiedad ```name``` de cada campo.
->```html
-><form action ="/register" method="post">
->   <label for="name">NOMBRE:</label>
->   <input type="text" name="name" id="name">
->   <label for="email">CORREO ELECTRONICO:</label>
->   <input type="email" name="email" id="email">
->   <label for="password">NOMBRE:</label>
->   <input type="password" name="password" id="password">
->   <button type="submit">Registrarse</button>
-></form>
->```
+    > [!NOTE]
+    > Antes de empezar con la validación, es importante tener en cuenta cómo están armados nuestros formularios. A la hora de escribir las validaciones, tomaremos como referencia la propiedad ```name``` de cada campo o input.
+
+    ```html
+    <form action ="/register" method="post">
+        <label for="name">NOMBRE:</label>
+        <input type="text" name="name" id="name">
+        <label for="email">CORREO ELECTRONICO:</label>
+        <input type="email" name="email" id="email">
+        <label for="password">NOMBRE:</label>
+        <input type="password" name="password" id="password">
+        <button type="submit">Registrarse</button>
+    </form>
+    ```
+2. Una vez tengamos el módilo instalado, vamos a requerirlo donde vayamos a realizar las validaciones. Podemos hacerlo directamente sobre el archivo de rutas o crear nuestras validaciones en un archivo aparte.
+
+    En cualquiera de los casos, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```check```.
+
+    ```js
+    const {check} = require('express-validator');
+    ```
+
+    El segundo paso será crear una variable donde almacenaremos el conjunto de validaciones que realizaremos sobre el formulario.
+
+    ```js
+    let validateRegister = [];
+    ```
+
+    El método ```check()``` nos permite agregar validaciones para cualquiera de los campos del formulario. Como parámetro recibe el nombre del campo a validar. Si por ejemplo queremos validar el campo name, el método quedaría así:
+
+    ```js
+    const validateRegister = [ check('name') ];
+    ```
+
+    Suponiendo que quisiéramos validar que el campo no esté vacío, sobre el método anterior, ejecutamos el método ```notEmpty()``` de la siguiente manera:
+
+    ```js
+    const validateRegister = [
+        check('name').notEmpty()
+    ];
+    ```
+    
+    >**Tipos de validaciones:**
+    >```js
+    >check('campo')
+    >.notEmpty()    // Verifica que el campo no esté vacío
+    >.isLength({min: 5, max: 10})   // Verifica la longitud de los datos
+    >.isEmail()     // Verifica que sea un email válido
+    >.isInt()       // Verifica que sea un número entero
+    >```
+    >Lista completa de validaciones:
+    >[Validators ↗](https://github.com/validatorjs/validator.js#validators)
+
+    >**Mensaje de error**
+    >Además de las validaciones, Express Validator nos permite definir el mensaje que recibirá el usuario por cada validación que falle.
+    >Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
+    >```js
+    >check('name')
+    >   .notEmpty().withMessage('Debes completar el nombre')
+    >   .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres')
+    >```
+
+    >**Cortando la cadena de validación - bail()**
+    >En algunos casos vamos a querer cortar la validación, ya que si por ejemplo un campo está vacío, no tiene sentido verificar si es un e-mail válido.
+    >Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
+    >Para esos casos, podemos implementar el método bail().
+    >```js
+    >check('email')
+    >   .notEmpty().withMessage('Debes completar el email').bail()
+    >   // En caso de que la primera validación falle,
+    >   // las siguientes no se ejecutan para ese campo.
+    >   .isEmail().withMessage('Debes completar un email válido')
+    >```
+
+    >**Ejemplo: array de validaciones completo**
+    >```js
+    >const validateRegister = [
+    >   check('name')
+    >       .notEmpty().withMessage('Debes completar el nombre').bail()
+    >       .isLength({ min: 5 }).withMessage('El nombre debe ser más largo'),
+    >   check('email')
+    >       .notEmpty().withMessage('Debes completar el email').bail()
+    >       .isEmail().withMessage('Debes completar un email válido'),
+    >   check('password')
+    >       .notEmpty().withMessage('Debes completar la contraseña').bail()
+    >       .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
+    >]
+    >```
+
+3. El siguiente paso es agregar las validaciones en las rutas. Este middleware, se ubica entre la ruta y la acción del controlador.
+
+    ```js
+    const validateRegister = [ ... ];
+    
+    // Porcesamiento del formulario de creación
+    router.post('/', validateRegister, userController.processRegister);
+    ```
