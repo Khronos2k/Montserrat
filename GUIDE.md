@@ -223,90 +223,92 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     ```
 2. Una vez tengamos el módilo instalado, vamos a requerirlo donde vayamos a realizar las validaciones. Podemos hacerlo directamente sobre el archivo de rutas o crear nuestras validaciones en un archivo aparte.
 
-    En cualquiera de los casos, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```check```.
+    * En cualquiera de los casos, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```check```.
 
+        ```js
+        const {check} = require('express-validator');
+        ```
+
+    * El segundo paso será crear una variable donde almacenaremos el conjunto de validaciones que realizaremos sobre el formulario.
+
+        ```js
+        let validateRegister = [];
+        ```
+
+        El método ```check()``` nos permite agregar validaciones para cualquiera de los campos del formulario. Como parámetro recibe el nombre del campo a validar. Si por ejemplo queremos validar el campo name, el método quedaría así:
+
+        ```js
+        const validateRegister = [ check('name') ];
+        ```
+
+        Suponiendo que quisiéramos validar que el campo no esté vacío, sobre el método anterior, ejecutamos el método ```notEmpty()``` de la siguiente manera:
+
+        ```js
+        const validateRegister = [
+            check('name').notEmpty()
+        ];
+        ```
+
+    <details>
+    <summary>🎁Contenido adicional:</summary>
+    
+    <sub>**Tipos de validaciones:**</sub>
     ```js
-    const {check} = require('express-validator');
+    check('campo')
+    .notEmpty()    // Verifica que el campo no esté vacío
+    .isLength({min: 5, max: 10})   // Verifica la longitud de los datos
+    .isEmail()     // Verifica que sea un email válido
+    .isInt()       // Verifica que sea un número entero
     ```
-
-    El segundo paso será crear una variable donde almacenaremos el conjunto de validaciones que realizaremos sobre el formulario.
-
+    
+     ***Lista completa de validaciones:***
+     [Validators ↗](https://github.com/validatorjs/validator.js#validators)
+    
+     <sub>**Mensaje de error**</sub>
+    
+    Además de las validaciones, Express Validator nos permite definir el mensaje que recibirá el usuario por cada validación que falle.
+    Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
     ```js
-    let validateRegister = [];
+    check('name')
+       .notEmpty().withMessage('Debes completar el nombre')
+       .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres')
     ```
-
-    El método ```check()``` nos permite agregar validaciones para cualquiera de los campos del formulario. Como parámetro recibe el nombre del campo a validar. Si por ejemplo queremos validar el campo name, el método quedaría así:
-
+    
+     <sub>**Cortando la cadena de validación - bail()**</sub>
+    
+    En algunos casos vamos a querer cortar la validación, ya que si por ejemplo un campo está vacío, no tiene sentido verificar si es un e-mail válido.
+    Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
+    Para esos casos, podemos implementar el método bail().
     ```js
-    const validateRegister = [ check('name') ];
+    check('email')
+       .notEmpty().withMessage('Debes completar el email').bail()
+       // En caso de que la primera validación falle,
+       // las siguientes no se ejecutan para ese campo.
+       .isEmail().withMessage('Debes completar un email válido')
     ```
-
-    Suponiendo que quisiéramos validar que el campo no esté vacío, sobre el método anterior, ejecutamos el método ```notEmpty()``` de la siguiente manera:
-
+    
+     <sub>**Ejemplo: array de validaciones completo**</sub>
     ```js
     const validateRegister = [
-        check('name').notEmpty()
-    ];
+       check('name')
+           .notEmpty().withMessage('Debes completar el nombre').bail()
+           .isLength({ min: 5 }).withMessage('El nombre debe ser más largo'),
+       check('email')
+           .notEmpty().withMessage('Debes completar el email').bail()
+           .isEmail().withMessage('Debes completar un email válido'),
+       check('password')
+           .notEmpty().withMessage('Debes completar la contraseña').bail()
+           .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
+    ]
     ```
-    **Contenido adicional:**
-    >
-    >**Tipos de validaciones:**
-    >```js
-    >check('campo')
-    >.notEmpty()    // Verifica que el campo no esté vacío
-    >.isLength({min: 5, max: 10})   // Verifica la longitud de los datos
-    >.isEmail()     // Verifica que sea un email válido
-    >.isInt()       // Verifica que sea un número entero
-    >```
-    >
-    >   > [!NOTE]
-    >   > Lista completa de validaciones:
-    >   > [Validators ↗](https://github.com/validatorjs/validator.js#validators)
-    >
-    >**Mensaje de error**
-    >
-    >Además de las validaciones, Express Validator nos permite definir el mensaje que recibirá el usuario por cada validación que falle.
-    >Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
-    >```js
-    >check('name')
-    >   .notEmpty().withMessage('Debes completar el nombre')
-    >   .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres')
-    >```
-    >
-    >**Cortando la cadena de validación - bail()**
-    >
-    >En algunos casos vamos a querer cortar la validación, ya que si por ejemplo un campo está vacío, no tiene sentido verificar si es un e-mail válido.
-    >Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
-    >Para esos casos, podemos implementar el método bail().
-    >```js
-    >check('email')
-    >   .notEmpty().withMessage('Debes completar el email').bail()
-    >   // En caso de que la primera validación falle,
-    >   // las siguientes no se ejecutan para ese campo.
-    >   .isEmail().withMessage('Debes completar un email válido')
-    >```
-    >
-    >**Ejemplo: array de validaciones completo**
-    >```js
-    >const validateRegister = [
-    >   check('name')
-    >       .notEmpty().withMessage('Debes completar el nombre').bail()
-    >       .isLength({ min: 5 }).withMessage('El nombre debe ser más largo'),
-    >   check('email')
-    >       .notEmpty().withMessage('Debes completar el email').bail()
-    >       .isEmail().withMessage('Debes completar un email válido'),
-    >   check('password')
-    >       .notEmpty().withMessage('Debes completar la contraseña').bail()
-    >       .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
-    >]
-    >```
+
+    </details>
 
 3. El siguiente paso será agregar las validaciones en las rutas. Este middleware, se ubica entre la ruta y la acción del controlador.
 
     ```js
     const validateRegister = [ ... ];
-    
-    // Porcesamiento del formulario de creación
+
     router.post('/', validateRegister, userController.processRegister);
     ```
 
@@ -316,4 +318,94 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >   productRouter.post('/', uploadFile.single('productImage'), validateCreateForm, productController.store);
     >   ```
 
-4. 
+4. Lo que vamos a hacer ahora es trabajar sobre el controlador para verificar si hubo errores en la validación.
+
+    * Nuevamente, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```validationResult```.
+
+        ```js
+        const { validationResult } = require('express-validator');
+        ```
+
+    * El segundo paso courrirá dentro del método del controlador que se encarga de procesar el formulario. Allí guardaremos, en la variable errors, la ejecución del método ```validationResult```, pasándole como parámetro el objeto ```request```.
+
+        ```js
+        let errors = validationResult(req);
+        ```
+    
+    * Lo siguiente será integrar un if, para determinar si el objeto que contiene los errores se encuentra vacío o no. Para esto, nos ayudaremos del método ```.isEmpty()``` 
+
+        ```js
+        register: (req, res) => {
+            let errors = validationResilt(req);
+
+            if (errors.isEmpty()) {
+                // No hay errores, seguimos adelante
+            } else {
+                // No hay errores, volvemos al formulario con los mensajes
+            }
+        }
+        ```
+    * Por último, para que podamos enviar los errores a la vista, deberemos hacer uso del método ```.array()```, que nos permitirá enviar los errores dentro de un array.
+
+        Es importante enviar también los contenidos de req.body, ya que queremos preservar los datos completados por el usuario al volver al formulario.
+
+        ```js
+        register: (req, res) => {
+            let errors = validationResilt(req);
+
+            if (errors.isEmpty()) {
+                // No hay errores, seguimos adelante
+            } else {
+                // No hay errores, volvemos al formulario con los mensajes
+                res.render('register', {errors: errors.array(), old: req.body})
+            }
+        }
+        ```
+
+        **Objeto de errores**
+
+        ```js
+        {
+            email: {
+                msg: 'Debes completar un email válido',
+                param: 'email',
+                value: 'unEmail',
+                location: 'body',
+            }
+            password: {
+                msg: 'La contraseña debe ser más larga',
+                param: 'password',
+                value: '1234',
+                location: 'body',
+            }
+        }
+        ```
+
+5. Como último paso, vamos a mostrar los errores en la vista. Haciendo uso de EJS, podremos preguntar si un campo determinado tiene errores. Si ese es el caso, podremos mostrar el mensaje de error.
+
+    > [!NOTE]
+    > Es imporante tener en cuenta que la primera vez que se cargue el formulario no habrá errores, y por lo tanto esa variable estará vacía. Para evitar problemas, siempre debemos preguntar si la variable de errores existe antes de intentar mostrar un error.
+    >   ```html
+    >   <% if (locals.errors && errors.name) { %>
+    >       ...
+    >   <% } %>
+    >   ```
+
+    ```html
+    <label for="email">Correo electrónico:</label>
+    <input type=email name="email" id="email">
+    <% if (locals.errors && errors.name) { %>
+        <p class="feedback"><%= errors.name %></p>
+    <% } %>
+    ```
+
+    Otro punto importante es que si el usuario ya completó el formulario, pero introdujo información inválida en algún campo, no vamos a querer que complete todo nuevamente.
+    
+    Por esa razón, en el paso anterior volvimos a enviar los datos del formulario original en el objeto ```old```.
+
+    Nuevamente con EJS podemos cargar ese valor en cada campo que corresponda.
+
+    ```html
+    <label for="email">Correo electrónico:</label>
+    <input type=email name="email" id="email" value="<%= locals.old && old.email ? old.email : '' %>">
+    ```
