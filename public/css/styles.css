@@ -567,6 +567,7 @@ body {
     width: 100%;
     padding: 8px;
     border: 2px solid rgba(100,100,100, 0);
+    outline: none;
     border-radius: var(--border-radius);
     background: var(--box-color-default);
     box-shadow: var(--box-shadow-default);
@@ -575,9 +576,12 @@ body {
     font-size: 14px;
     font-weight: 400;
     
-    transition: all 600ms;
+    transition: all 800ms;
 }
-.form__input:hover {
+.form__input:hover,
+.form__input:focus {
+    box-shadow: var(--box-shadow-default--button-color);
+    background: var(--background-light-color);
     border: 2px solid var(--action-color-on);
 }
 .form__input-file{
@@ -616,8 +620,6 @@ body {
     font-size: 70px;
     color: var(--font-secondary-color);
 }
-
-
 
 .form-box__a {
     color: var(--action-color-off);
