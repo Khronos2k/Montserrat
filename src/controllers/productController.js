@@ -7,6 +7,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 //  ****    Expresión regular   ****
 const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+const { validationResult } = require('express-validator')
+
 const productController = {
     index: (req, res) => {
         res.render('cart/products', {products, toThousend})
@@ -55,22 +57,29 @@ const productController = {
         res.render('cart/productCreate');
     },
     store: (req, res) => {
-        const data = req.body;
+        let errors = validationResult(req);
 
-        const index = products[products.length -1].id;
-        
-        const newProduct = {
-            id: index + 1,
-            name: data.name,
-            type: data.type,
-            price: data.price,
-            discount: data.discount,
-            category: data.category,
-            image: req.file.filename,
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.redirect("/product");
+        if (errors.isEmpty()) {
+            const data = req.body;
+    
+            const index = products[products.length -1].id;
+            
+            const newProduct = {
+                id: index + 1,
+                name: data.name,
+                type: data.type,
+                price: data.price,
+                discount: data.discount,
+                category: data.category,
+                image: req.file.filename,
+            };
+            
+            products.push(newProduct);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products));
+            res.redirect("/product");
+        } else {
+            res.render('cart/productCreate', {errors: errors.array(), inputInf: req.body});
+        }
     }
 }
 module.exports = productController;

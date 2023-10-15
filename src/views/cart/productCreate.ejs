@@ -10,24 +10,30 @@
                 <div class="form form--wide">
                     <div>
                         <h2 class="form__head">Crear producto</h2>
+                        <% if(locals &&  locals.errors){ %>
+                            <%errors.forEach(error => {%>
+                                <h2 class="form__head"><%= error.msg %></h2>
+                            <% }) %>
+                        <% } %>
                     </div>
                     <form class="form__form-items" action="/product" method="post" enctype="multipart/form-data">
                         <div class="form__form-items-column">
                             <div class="form__item">
-                                <input class="form__input" type="text" name="name" placeholder="Nombre">
+                                <input class="form__input" type="text" name="name" placeholder="Nombre" value="<%= locals.inputInf && inputInf.name ? inputInf.name : '' %>">
                             </div>
                             <div class="form__item">
                                 <select class="form__input" name="type" id="">
-                                    <option value="food">Comida</option>
-                                    <option value="drink">Bebida</option>
-                                    <option value="dessert">Postre</option>
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="food" <%= locals.inputInf && inputInf.type === 'food' ? 'selected' : '' %> >Comida</option>
+                                    <option value="drink" <%= locals.inputInf && inputInf.type === 'drink' ? 'selected' : '' %> >Bebida</option>
+                                    <option value="dessert" <%= locals.inputInf && inputInf.type === 'dessert' ? 'selected' : '' %>>Postre</option>
                                 </select>
                             </div>
                             <div class="form__item">
-                                <input class="form__input" type="number" name="price" id="" placeholder="Precio">
+                                <input class="form__input" type="number" name="price" id="" placeholder="Precio" value="<%= locals.inputInf && inputInf.price ? inputInf.price : '' %>">
                             </div>
                             <div class="form__item">
-                                <input class="form__input" type="number" name="discount" id="" placeholder="Descuento">
+                                <input class="form__input" type="number" name="discount" id="" placeholder="Descuento" value="<%= locals.inputInf && inputInf.discount ? inputInf.discount : '' %>">
                             </div>
                             <div class="form__item">
                                 <input class="form__input" type="text" name="category" id="" placeholder="Category">
