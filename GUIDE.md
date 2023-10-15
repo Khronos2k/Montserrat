@@ -248,7 +248,8 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
         check('name').notEmpty()
     ];
     ```
-    
+    **Contenido adicional:**
+    >
     >**Tipos de validaciones:**
     >```js
     >check('campo')
@@ -257,26 +258,26 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >.isEmail()     // Verifica que sea un email válido
     >.isInt()       // Verifica que sea un número entero
     >```
-
-    >[!NOTE]
-    >Lista completa de validaciones:
-    >[Validators ↗](https://github.com/validatorjs/validator.js#validators)
-
+    >
+    > [!NOTE]
+    > Lista completa de validaciones:
+    > [Validators ↗](https://github.com/validatorjs/validator.js#validators)
+    >
     >**Mensaje de error**
     >
     >Además de las validaciones, Express Validator nos permite definir el mensaje que recibirá el usuario por cada validación que falle.
-    Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
+    >Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
     >```js
     >check('name')
     >   .notEmpty().withMessage('Debes completar el nombre')
     >   .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres')
     >```
-
+    >
     >**Cortando la cadena de validación - bail()**
     >
     >En algunos casos vamos a querer cortar la validación, ya que si por ejemplo un campo está vacío, no tiene sentido verificar si es un e-mail válido.
-    Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
-    Para esos casos, podemos implementar el método bail().
+    >Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
+    >Para esos casos, podemos implementar el método bail().
     >```js
     >check('email')
     >   .notEmpty().withMessage('Debes completar el email').bail()
@@ -284,7 +285,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >   // las siguientes no se ejecutan para ese campo.
     >   .isEmail().withMessage('Debes completar un email válido')
     >```
-
+    >
     >**Ejemplo: array de validaciones completo**
     >```js
     >const validateRegister = [
@@ -300,7 +301,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >]
     >```
 
-3. El siguiente paso es agregar las validaciones en las rutas. Este middleware, se ubica entre la ruta y la acción del controlador.
+3. El siguiente paso será agregar las validaciones en las rutas. Este middleware, se ubica entre la ruta y la acción del controlador.
 
     ```js
     const validateRegister = [ ... ];
@@ -308,4 +309,11 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     // Porcesamiento del formulario de creación
     router.post('/', validateRegister, userController.processRegister);
     ```
+
+    > [!IMPORTANT]
+    > Cuando tengamos más de un middleware en las rutas, debemos colocar el array de validaciones antes del controlador
+    >   ```js
+    >   productRouter.post('/', uploadFile.single('productImage'), validateCreateForm, productController.store);
+    >   ```
+
 4. 
