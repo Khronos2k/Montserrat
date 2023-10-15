@@ -259,9 +259,9 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >.isInt()       // Verifica que sea un número entero
     >```
     >
-    > [!NOTE]
-    > Lista completa de validaciones:
-    > [Validators ↗](https://github.com/validatorjs/validator.js#validators)
+    >   > [!NOTE]
+    >   > Lista completa de validaciones:
+    >   > [Validators ↗](https://github.com/validatorjs/validator.js#validators)
     >
     >**Mensaje de error**
     >
@@ -311,7 +311,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     ```
 
     > [!IMPORTANT]
-    > Cuando tengamos más de un middleware en las rutas, debemos colocar el array de validaciones antes del controlador
+    > Cuando tengamos más de un middleware en las rutas, debemos colocar el array de validaciones antes del controlador como se puede ver en este ejemplo:
     >   ```js
     >   productRouter.post('/', uploadFile.single('productImage'), validateCreateForm, productController.store);
     >   ```
