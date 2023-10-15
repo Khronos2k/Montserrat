@@ -257,12 +257,15 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >.isEmail()     // Verifica que sea un email válido
     >.isInt()       // Verifica que sea un número entero
     >```
+
+    >[!NOTE]
     >Lista completa de validaciones:
     >[Validators ↗](https://github.com/validatorjs/validator.js#validators)
 
     >**Mensaje de error**
+    >
     >Además de las validaciones, Express Validator nos permite definir el mensaje que recibirá el usuario por cada validación que falle.
-    >Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
+    Para implementar los mensajes, utilizamos el método ```withMessage()``` a continuación de cada validación
     >```js
     >check('name')
     >   .notEmpty().withMessage('Debes completar el nombre')
@@ -270,9 +273,10 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     >```
 
     >**Cortando la cadena de validación - bail()**
+    >
     >En algunos casos vamos a querer cortar la validación, ya que si por ejemplo un campo está vacío, no tiene sentido verificar si es un e-mail válido.
-    >Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
-    >Para esos casos, podemos implementar el método bail().
+    Si no cortamos la validación, el usuario recibirá todos los errores juntos en lugar de solo el que corresponda.
+    Para esos casos, podemos implementar el método bail().
     >```js
     >check('email')
     >   .notEmpty().withMessage('Debes completar el email').bail()
@@ -304,3 +308,4 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     // Porcesamiento del formulario de creación
     router.post('/', validateRegister, userController.processRegister);
     ```
+4. 
