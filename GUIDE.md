@@ -197,7 +197,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
     ![Alt text](guideAdds/image20.png)
 
-## Express
+## Armado de página web desde 0
 
 ### Express-Validator
 
@@ -223,7 +223,7 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     ```
 2. Una vez tengamos el módilo instalado, vamos a requerirlo donde vayamos a realizar las validaciones. Podemos hacerlo directamente sobre el archivo de rutas o crear nuestras validaciones en un archivo aparte.
 
-    * En cualquiera de los casos, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```check```.
+    * En cualquiera de los casos, el primer paso será requerir el módulo y, haciendo uso de la desestructuración, pedir el método ```check``` o ```body```.
 
         ```js
         const {check} = require('express-validator');
@@ -409,3 +409,285 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
     <label for="email">Correo electrónico:</label>
     <input type=email name="email" id="email" value="<%= locals.old && old.email ? old.email : '' %>">
     ```
+
+### Session and cookies
+
+1. Primero debemos instalar  ```express-session```.
+
+    ```
+    npm install express-session --save
+    ```
+
+2. Lo siguente será implementar session en nuestro proyecto de la siguiente manera.
+
+    * Primero lo requerimos en el entry point de la aplicación, es decir, en el ```app.js```
+
+        ```js
+        const session = require('express-session');
+        ```
+
+    * Luego lo configuramos como middleware a nivel de aplicación. Ejecutamos ```session()``` pasándole como argumento un objeto literal con la propiedad secret con un texto único aleatorio, que servirá para identificar nuestro sitio web.
+
+        ```js
+        app.use(session({secret: "Nuestro mensaje secreto"}));
+        ```
+
+3. Una vez implementado, ya podremos hacer uso de session. Cada vez que queramos ```definir``` y ```almacenar``` información, llamamos a la propiedad ```session``` del objeto request:
+
+    ```js
+    req.session.colorFondo = 'violeta';
+    ```
+
+    * Para leer la información de session:
+
+    ```js
+    let colorFondo = req.session.colorFondo;
+    ```
+
+<details>
+<summary>💡Ejemplo práctico</summary>
+
+Vamos a realizar un pequeño ejemplo funcional.
+
+1. Lo primero que vamos a hacer es posicionarnos en nuestro archivo de rutas y crear nuestra ruta ```/login``` con su respectivo ```controller```.
+
+    ```js
+    router.get('/login', usersController.login);
+    ```
+
+2. Lo siguiente será dirigirnos a nuestro archivo de controladores y crear nuestro método ```login``` que solo nos devuelve una vista para el login de usuario.
+
+    ```js
+    let userController = {
+        login: function(req, res) {
+            res.render('login');
+        }
+    }
+    ```
+
+3. A continuación deberemos crear nuestro formulario de login.
+
+    ```html
+    <form action="/users/login" method="POST">
+        <label for="">Email</label>
+        <input type="email" name="email"><br>
+        <label for="">Password</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="login"><br>
+    </form>
+    ```
+
+4. Retornamos al archivo de rutas y creamos nuestro método ```post``` de la ruta ```login``` con su respectivo ```controller```.
+
+    * Como un aditivo a esta práctica, podríamos probar con añadir el middleware de ```express-validator```
+
+        ```js
+        const validateRegister = [
+            check('email').isEmail().withMessage('El email es inválido'), 
+            check('password').isLength({min: 8}).withMessage('La contraseña debe tener como mínimo 8 caracteres.')
+        ]
+        ```
+
+    * Agregando el método ```post```.
+
+        ```js
+        router.post('login', , usersController.processLogin)
+        ```
+
+    * Agregando el controllador de usuario.
+
+        ```js
+        let userController = {
+            login: function(req, res) {
+                res.render('login');
+            },
+            processLogin: function(req, res) {
+                let errors = validationResult(req);
+
+                if (errors.isEmpty()) {
+                    let usersJSON = fs.readFileSync('users.json', {})
+                    let users;
+                    if (usersJSON == '') {
+                        users = [];
+                    } else {
+                        users = JSON.parse(usersJSON);
+                    }
+                    for (let i = 0; i < users.length; i++) {
+                        if (users[i].email == req.body.email) {
+                            if (bcrypt.compareSync(req.body.password, users[i].password)) {
+                                let usuarioALoguearse = users [i];
+                                break;
+                            }
+                        }
+                    }
+
+                    if (usuarioALoguearse == undefined) {
+                        res.render('login', {errors: [{msg: 'Credenciales inválidas'}]})
+                    }    
+                    
+                    req.session.usuarioLogueado = usuarioALoguearse
+                    res.render('success');
+
+                } else {
+                    res.render('login', {errors: errors.errors})
+                }
+            }
+        }
+        ```
+    
+    * Como adicional podemos testear lo que acabamos de hacer agregando lo siguiente:
+    
+        ```js
+        router.get('/check', function(req, res){
+            if(req.session.usuarioLogueado == undefined){
+                res.send('No estás logueado')
+            } else {
+                res.send('El usuario logueado es: ' + req.session.usuarioLogueado.email)
+            }
+        })
+        ```
+
+5. Seguido de esto, vamos a crear nuestro middleware que se encargará de verificar que el usuario se haya logueado.
+
+    * Primero vamos crar, dentro de nuestra carpeta ```src```, la carpeta ```middleware```.
+    
+    * En la carpeta que acabamos de crear vamos a crear el archivo ```authMiddleware.js```, que se va a encargar de que el usuario está logueado.
+
+    ```js
+    function authMiddleware(req, res, next) {
+        if (req.session.usuarioLogueado == undefined) {
+            next();
+        } else {
+            res.send('Esta página es solo para usuarios');
+        }
+    }
+    module.exports = authMiddleware;
+    ```
+
+    * En la misma carpeta vamos a crear el archivo ```guestMiddleware```, sirve para los invitados y se encarga de verificar que el usuario no esté logueado.
+
+    ```js
+    function guestMiddleware(req, res, next) {
+        if (req.session.usuarioLogueado == undefined) {
+            next();
+        } else {
+            res.send('Esta página es solo para invitados');
+        }
+    }
+    module.exports = guestMiddleware;
+    ```
+
+6. Por último vamos a importar nuestros middleware a nuestro archivo de rutas e indicar a que rutas se puede ingresar siendo usuario o invitado.
+
+    * Importando los middlewares.
+
+    ```js
+    const authMiddleware = require('./src/middlewares/authMiddleware')
+    const guestMiddleware = require('./src/middlewares/guestMiddleware')
+    ```
+
+    * Agregando los middlewares a las rutas.
+
+    ```js
+    router.get('/register', guestMiddleware, usersController.register)
+    router.get('/register', authMiddleware, )
+    ```
+
+</details>
+
+### Cookies
+
+1. Lo primero que vamos a necesitar es instalar el paquete ```cookie-parser```.
+
+    ```
+    npm install cookie-parser
+    ```
+
+2. Luego lo requeriremos a nivel de aplicación.
+
+    ```js
+    const cookieParser = require('cookie-parser');
+    app.use(cookieParser());
+    ```
+
+3. Luego nos moveremos a nuestro controller y modificaremos el ```response``` creando una cookie. En este caso solo vamos a guardar el email del usuario.
+
+    Para ello ejecutamos el método ```.cookie()``` sobre el objeto ```response```, pasándole dos argumentos: el ```nombre``` que queramos asignarle a esa cookie y el ```valor``` que tendrá.
+
+    ```js
+        if (req.body.recordame != undefined) {
+            res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000});
+        }
+    ```
+
+    > [!NOTE]
+    > Para leer información de una cookie usamos el objeto ```request``` llamando al objeto ```cookies```, seguido del nombre de la cookie que definimos anteriormente.
+    > ```js
+    > console.log(req.cookies.recordame);
+    > ```
+
+4. Ahora lo que vamos a hacer es crear un middleware a nivel de aplicación.
+
+    * Para esto vamos a crear un archivo ```cookieAuthMiddleware```
+
+    * En este archivo vamos a crear la función propia de un middleware.
+
+        ```js
+        function cookieAuthMiddleware(req,res,next) {
+            if(req.cookie.recordame != undefined && req.session.usuarioLogueado == undefined) {
+                //Método de lectura de usuarios
+                for (users[i].email == req.cookies.recordame) {
+                    usuarioALoguearse = users[i];
+                    break;
+                }
+            }
+            req.session.usuarioLogueado = usuarioALoguearse;
+            next();
+        }
+        module.exports = cookieAuthMiddleware;
+        ```
+
+5. Lo siguiente será agregar el middleware que acabamos de crear en nuestro archivo ```app.js```.
+
+    * Requiriendo el middleware.
+    
+        ```js
+        const cookieAuthMiddleware = require('./middleware/cookieAuthMiddleware');
+        ```
+
+    * Hacemos que cruce por toda la aplicación.
+        ```js
+        app.use(cookieAuthMiddleware);
+        ```
+### Hashing
+
+1. El primer paso será instalar el paquete ```bcryptjs```
+
+    ```
+    npm install --save bcryptjs
+    ```
+
+2. Luego lo requerimos en el archivo que lo vayamos a utilizar.
+
+    ```js
+    const bcrypt = require('bcryptjs');
+    ```
+
+    > [!NOTE]
+    > Para transformar un string en un hash, lo único que haremos es utilizar la función ```bcrypt.hashSync()```.
+    >
+    >Esta función lleva dos parámetros. Primero, el texto que queremos encriptar y segundo, la cantidad de "sal" que le queremos echar o, en otras palabras, un número que va a determinar que el hash resultante sea bastante único. La cantidad suele rondar entre 10 a 12 de sal.
+    >
+    > ```js
+    > bcrypt.hashSync('jonsnowreyenelnorte', 10);
+    > ```
+
+3. Por último, para comparar una contraseña hasheada con la contraseña plana introducida por el usuario, utilizaremos ```bcrypt.compareSync()```. Este método retorna un valor booleano, por ende, puede ser usado dentro de un ```if```.
+
+    ```js
+    const password = 'tomate123';
+    const resultado = bcrypt.hashSync(password, 10);
+    const validacion = bcrypt.compareSync(pasword, resultado);
+    ```
+
+### 
