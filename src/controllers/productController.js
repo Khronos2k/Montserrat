@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json')
+const productsFilePath = path.join(__dirname, '../data/products.json');
 
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 //  ****    Expresión regular   ****
@@ -11,15 +11,43 @@ const { validationResult } = require('express-validator')
 
 const productController = {
     index: (req, res) => {
-        res.render('cart/products', {products, toThousend})
+        res.render('cart/products', {products, toThousend});
     },
     showProductCart: (req, res) => {
-        res.render('cart/productCart')
+        res.render('cart/productCart');
     },
     showProductDetails: (req,res) => {
         const id = req.params.id;
         const product = products.find(item => item.id == id);
         res.render('cart/productDetail', {product, toThousend});
+    },
+    create: (req, res) => {
+        res.render('cart/productCreate');
+    },
+    store: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty() && req.file) {
+            const data = req.body;
+
+            let index = products.length == 0 ? 0 : products[products.length -1].id;
+
+            const newProduct = {
+                id: index + 1,
+                name: data.name,
+                type: data.type,
+                price: data.price,
+                discount: data.discount,
+                category: data.category,
+                image: req.file.filename,
+            };
+            
+            products.push(newProduct);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products));
+            res.redirect("/product");
+        } else {
+            res.render('cart/productCreate', {errors: errors.mapped(), oldData: req.body});
+        }
     },
     edit: (req, res) => {
         const id = req.params.id;
@@ -51,35 +79,6 @@ const productController = {
         
         fs.writeFileSync(productsFilePath, JSON.stringify(leftProducts));
         res.redirect("/product");
-    },
-
-    create: (req, res) => {
-        res.render('cart/productCreate');
-    },
-    store: (req, res) => {
-        let errors = validationResult(req);
-
-        if (errors.isEmpty()) {
-            const data = req.body;
-    
-            const index = products[products.length -1].id;
-            
-            const newProduct = {
-                id: index + 1,
-                name: data.name,
-                type: data.type,
-                price: data.price,
-                discount: data.discount,
-                category: data.category,
-                image: req.file.filename,
-            };
-            
-            products.push(newProduct);
-            fs.writeFileSync(productsFilePath, JSON.stringify(products));
-            res.redirect("/product");
-        } else {
-            res.render('cart/productCreate', {errors: errors.array(), inputInf: req.body});
-        }
     }
 }
 module.exports = productController;

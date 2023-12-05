@@ -1,25 +1,30 @@
 <header class="container-header">
     <div class="header">
-        <a class="header__a" href="/">
+        <a class="header__a--logo" href="/">
             <img src="/images/icons/logo-montserrat.svg" alt="LOGO">
-        </a>
-        <button class="header__i">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav class="header__nav header__nav--center">
+        </a> 
+        <nav class="header__nav">
             <ul class="header__ul">
-                <li class="header__li"><a class="header__a header__a--nav" href="/">Inicio</a></li>
-                <li class="header__li"><a class="header__a header__a--nav" href="#">Nosotros</a></li>
-                <li class="header__li"><a class="header__a header__a--nav" href="/product">Menú</a></li>
-                <li class="header__li"><a class="header__a header__a--nav" href="#">Contacto</a></li>
-                <li class="header__li"><a class="header__a header__a--nav" href="/product/create">Crear</a></li>
+                <li class="button-circle header__li"><a class="header__a" href="/"><span class="material-symbols-rounded">home</span></a></li>
+                <li class="button-circle header__li"><a class="header__a" href="/product"><span class="material-symbols-rounded">menu_book</span></a></li>
+                <li class="button-circle header__li"><a class="header__a" href="#"><span class="material-symbols-rounded">info</span></a></li>
+                <!-- <li class="header__li"><a class="header__a header__a--nav" href="#">Contacto</a></li> -->
             </ul>
         </nav>
+    </div>
+</header>
+<header class="container-header container-header--right">
+    <div class="header">
+        <button class="header__menu">
+            <span class="material-symbols-rounded">chevron_left</span>
+        </button>
         <div class="header__nav">
             <ul class="header__ul">
-                <li class="header__li"><a class="header__a" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__li"><a class="header__a" href="/product/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li class="header__li"><a class="button" href="/user/login"><i class="button__i fa-solid fa-arrow-right-to-bracket"></i>Sign in</a></li>
+                <li class="button-circle header__li"><a class="header__a" href="#"><span class="material-symbols-rounded">search</span></a></li>
+                <li class="button-circle header__li"><a class="header__a" href="/product/cart"><span class="material-symbols-rounded">shopping_cart</span></a></li>
+                <li class="button-circle header__li button"><a class="header__a" href="/user/login"><span class="material-symbols-rounded">login</span></a></li>
+                <li class="button button-circle header__li"><a class="header__a" href="/product/create"><span class="span material-symbols-rounded">edit</span></a></li>
+                <li class="button button-circle header__li"><a class="header__a" href="/user/list"><span class="material-symbols-rounded">folder_shared</span></a></li>
             </ul>
         </div>
     </div>

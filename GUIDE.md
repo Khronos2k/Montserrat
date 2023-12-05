@@ -199,6 +199,10 @@ Para trabajar con ellas, debemos seguir los siguientes pasos:
 
 ## Armado de página web desde 0
 
+### CRUD
+
+
+
 ### Express-Validator
 
 1. Primero debemos instalar ```express-validator```

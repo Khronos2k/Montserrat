@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    <main class="main">
+        <div>
+            <section class="container">
+                <div class="users">
+                    <ol class="users-list">
+                        <li class="user-card">
+                            <div class="user-card__container-user-img">
+                                <img class="user-card__user-img" src="/images/users/user01-user.jpg" alt="image">
+                            </div>
+                            <div class="user-card__container-user-info">
+                                <div class="user-card__user-name">Primer nombre</div>
+                                <div class="user-card__user-last-name">Apellido segundo apellido</div>
+                                <div class="user-card__items-column">
+                                    <div class="user-card__user-email">ususario1@hotmail.com</div>
+                                    <div class="user-card__user-cell">000 - 1222333</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

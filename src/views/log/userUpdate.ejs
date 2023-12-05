@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    <main class="main">
+        <div>
+            <section class="container container-form">
+                <div class="form form--wide">
+                    <div>
+                        <h1 class="form__head">Registo de usuario</h1>
+                    </div>
+                    <form class="form__form-items" action="">
+                        <div class="form__form-items-column">
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Name" type="text" name="Nombre" id="Nombre" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Last Name" type="text" name="Apellido" id="Apellido" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="User name" type="text" name="Nombre y Apellido" id="usuario" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Email" type="email" name="E-mail" id="email" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Password" type="password" name="contraseña" id="contraseña" required>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" placeholder="Confirm Password" type="password" name="confirmacion" id="confirmacion" required>
+                            </div>
+                        </div>
+                        <div class="form__form-items-column form__form-items-column--right">
+                            <input class="form__input-file" type="file" name="productImage" id="productImage" multiple>
+                            <label for="productImage">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span class="iborrainputfile">Seleccionar archivo</span>
+                            </label>
+                        </div>
+                        <div class="form__footer form__footer--row">
+                            <button class="button-elongated button-elongated--row" type="reset">Cancelar</button>
+                            <button class="button-elongated button-elongated--row" type="submit">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
