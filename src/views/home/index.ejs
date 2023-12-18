@@ -10,13 +10,33 @@
                 <div class="cover"> 
                     <div class="cover-content">
                         <h5 class="cover-content__subtitle">Restobar</h5>
-                        <h1 class="cover-content__title">MOntserrAt</h1>
+                        <h1 class="cover-content__title">Montserrat</h1>
                         <h5 class="cover-content__subtitle cover-content__subtitle--inferior">tu lugar de encuentro</h5>
                     </div>
                 </div>
             </section>
         </div>
     </main>
+    
+    <!-- para que los iconos queden estaticos en el body -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var footerHeight = $('footer').outerHeight();
+            var footerTop = $('footer').offset().top - $(window).scrollTop();
+            var divTop = $('.container-header').offset().top;
+            var divHeight = $('.container-header').height();
+        
+            if (footerTop < divHeight) {
+                $('.container-header').css({
+                    position: 'fixed',
+                    bottom: footerHeight
+                });
+            } else {
+                $('.container-header').attr('style', '');
+            }
+        });
+    </script> -->
     <!-- footer -->
     <%- include('../partials/footer') %>
 </body>
