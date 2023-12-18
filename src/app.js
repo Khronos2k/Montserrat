@@ -1,11 +1,12 @@
 //  *Expres: require - (don't modify)
+
 const express = require('express');
 const app = express();
 //  *Path: require - (don't modify)
 const path = require('path');
 //  *Override: require - (don't modify)
 const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
+
 //  *------v
 const cookieParser = require('cookie-parser');
 //  *Express: ubicación de los archivos de imagenes & estilos - (don't modify)
@@ -15,10 +16,10 @@ const publicPath = path.resolve(__dirname, '../public');
 
 
 app.use(express.static(publicPath));  
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
-
+app.use(methodOverride('_method'));
 
 //  *Express: indicamos la utilización de template engine y la ubicación de las vistas - (don't modify)
 app.set('view engine', 'ejs')
@@ -39,6 +40,6 @@ app.use((req, res, next) => {
 });
 
 // Server: 3001 - (don't modify)
-app.listen(3001, ()=>{
-    console.log('Corriendo servidor en puerto 3001');
+app.listen(3002, ()=>{
+    console.log('Corriendo servidor en puerto 3002');
 });
