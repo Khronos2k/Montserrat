@@ -1,3 +1,135 @@
+
+// const path = require('path');
+
+
+// //  ****    Expresión regular   ****
+// const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+// const { validationResult } = require('express-validator');
+// const DetalleDePedidos = require('../../database/models/DetalleDePedidos');
+// const Productos = require('../../database/models/Productos.js');
+
+// const productController = {
+    
+//     index: (req, res) => {
+//         Productos.findAll().then((products) => {
+//                 res.render('cart/products', {products: productos, toThousend});
+//             })
+//             .catch((error) => {
+//                 console.error('Error al obtener los productos:', error);
+//             });
+//     },
+
+//     showProductCart: (req, res) => {
+//         // Asume que tiene un modelo Pedidos que representa los pedidos
+//         const Pedidos = require('../../database/models/Pedidos.js'); 
+    
+//         // Asume que el ID del pedido/carrito de compras está en req.session.pedidoId
+//         const pedidoId = req.session.pedidoId;
+    
+//         Pedidos.findByPk(pedidoId, {
+//             include: Productos // Incluye los productos en el pedido
+//         })
+//         .then((pedido) => {
+//             res.render('cart/productCart', {pedido});
+//         })
+//         .catch((error) => {
+//             console.error('Error al obtener el pedido:', error);
+//         });
+//     },
+
+//     showProductDetails: (req,res) => {
+//         const id = req.params.id;
+//         Productos.findByPk(id)
+//             .then((product) => {
+//                 res.render('cart/productDetail', {product, toThousend});
+//             })
+//             .catch((error) => {
+//                 console.error('Error al obtener el producto:', error);
+//             });
+//     },
+//     create: (req, res) => {
+//         res.render('cart/productCreate');
+//     },
+//     store: (req, res) => {
+//         let errors = validationResult(req);
+
+//         if (errors.isEmpty() && req.file) {
+//             const data = req.body;
+
+//             const newProduct = {
+//                 nombre: data.name,
+//                 tipo: data.type,
+//                 precio: data.price,
+//                 descuento: data.discount,
+//                 Categoria: data.category,
+//                 imagen: req.file.filename,
+//             };
+            
+//             Productos.create(newProduct)
+//                 .then(() => {
+//                     res.redirect("/product");
+//                 })
+//                 .catch((error) => {
+//                     console.error('Error al crear el producto:', error);
+//                 });
+//         } else {
+//             res.render('cart/productCreate', {errors: errors.mapped(), oldData: req.body});
+//         }
+//     },
+//     edit: (req, res) => {
+//         const id = req.params.id;
+//         Productos.findByPk(id)
+//             .then((product) => {
+//                 res.render('cart/productUpdate', {productToEdit: product});
+//             })
+//             .catch((error) => {
+//                 console.error('Error al obtener el producto:', error);
+//             });
+//     },
+
+//     update: (req, res) => {
+//         const id = req.params.id;
+//         const editProduct = req.body;
+
+//         Productos.update({
+//             name: editProduct.name,
+//             type: editProduct.type,
+//             price: editProduct.price,
+//             discount: editProduct.discount,
+//             category: editProduct.category,
+//             image: req.file.filename,
+//         }, {
+//             where: {
+//                 id: id
+//             }
+//         })
+//         .then(() => {
+//             res.redirect("/product");
+//         })
+//         .catch((error) => {
+//             console.error('Error al actualizar el producto:', error);
+//         });
+//     },
+
+//     delete: (req, res) => {
+//         const id = req.params.id;
+        
+//         Productos.destroy({
+//             where: {
+//                 id: id
+//             }
+//         })
+//         .then(() => {
+//             res.redirect("/product");
+//         })
+//         .catch((error) => {
+//             console.error('Error al eliminar el producto:', error);
+//         });
+//     }
+// }
+// module.exports = productController;
+
 const fs = require('fs');
 const path = require('path');
 
@@ -8,6 +140,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const toThousend = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const { validationResult } = require('express-validator')
+const DetalleDePedidos = require('../../database/models/DetalleDePedidos');
+const Productos = require('../../database/models/Productos.js');
+
 
 const productController = {
     index: (req, res) => {
