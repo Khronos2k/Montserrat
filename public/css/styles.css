@@ -33,6 +33,9 @@
     box-sizing: border-box;
 }
 body {
+    background-image: url('../images/tumblr_mg4ugrTQfq1rc4njto1_500.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--font-family-primary);
 }
 
@@ -50,6 +53,8 @@ body {
     max-width: 1200px;
     padding: 40px 0 40px 0;
 }
+
+
 /*BUTTON-ELONGATED*/
 .button-elongated {
     display: flex;
@@ -77,6 +82,8 @@ body {
     cursor: pointer;
     background: var(--button-color-on);
 }
+
+
 /*BUTTON-RADIO*/
 .button-circle {
     display: flex;
@@ -90,7 +97,7 @@ body {
     border-radius: 50%;
     border: none;
     background: var(--box-color-default);
-    box-shadow: var(--box-shadow-default);
+    /* box-shadow: var(--box-shadow-default); */
     
     font-size: 25px;
 
@@ -112,15 +119,15 @@ body {
 }
 /**/
 
-
 /*B>HEADER--------------------------*/
 .container-header {
     display: flex;
     align-items: center;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     justify-content: flex-start;
     z-index: 1;
+    top: 0;
 
     height: 100%;
     width: fit-content;
@@ -219,9 +226,26 @@ body {
 .container-footer { 
     background-color: var(--background-default);
 }
-.footer {
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.footer-bottom {
     display: flex;
 
+    box-sizing: border-box;
+    padding: 200px;
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around; /* Añade espacio alrededor de las listas */
     width: 100%;
     margin: auto;
     padding: 50px;
@@ -231,36 +255,61 @@ body {
     box-shadow: var(--box-shadow-default);
 }
 .footer__ul {
-    width: 25%
+    width: 30%;
+    padding: 0; /* Elimina el padding predeterminado de las listas */
 }
 .footer__title {
-    font-size: 20px;
+    font-size: 40px;
     line-height: 30px;
     font-weight: 600;
     color: var(--button-color-off);
+    margin-bottom: 15px; /* Añade un margen inferior para separar el título de los elementos de la lista */
+}
+
+.footer__title_Down{
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--button-color-off);
+    margin-bottom: 15px; /* Añade un margen inferior para separar el título de los elementos de la lista */
 }
 .footer__li {
     list-style: none;
-    margin: 15px 0;
+    margin: 5px 0; /* Reduce el margen para que los elementos de la lista estén más juntos */
+    color:white;
 }
+
+.footer__li1{
+    list-style: none;
+    margin: 5px 0;
+    color:rgb(27, 27, 27);
+}
+
 .footer__a {
     font-size: 14px;
     line-height: 20PX;
     font-weight: 600;
-    color: var(--font-primary-color);
+    color: inherit;
     text-decoration: none;
+    transition: color 0.3s ease; /* Añade una transición para el cambio de color */
 }
 
+.footer__a:hover {
+    color: var(--button-color-off); /* Cambia el color del enlace cuando se pasa el cursor sobre él */
+}
 
 
 /*B>COVER---------------------------*/
 
 .container-cover {
     position: relative;
-    
+    background-image: url('../images/tumblr_mg4ugrTQfq1rc4njto1_500.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    max-height: 800px;
+    max-height: 900px;
+
     background-color: var(--box-color-default);
 }
 .cover {
@@ -273,7 +322,7 @@ body {
     height: 100%;
     max-width: 1600px;
     max-height: 800px;
-    color: var(--font-primary-color);
+    color: rgb(255, 255, 255);
     position: relative;
 }
 .cover-content {
