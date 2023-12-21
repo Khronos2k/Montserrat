@@ -12,7 +12,10 @@ const cookieParser = require('cookie-parser');
 //  *Express: ubicación de los archivos de imagenes & estilos - (don't modify)
 const publicPath = path.resolve(__dirname, '../public');
 
+const apiProductsRoutes = require('./routes/api/apiProducts');
+
 //  **** Middlewares ****
+app.use('/api', apiProductsRoutes);
 
 
 app.use(express.static(publicPath));  
@@ -30,10 +33,13 @@ app.set('views', './src/views');
 const indexRouter = require('./routes/indexRoute');
 const productRouter = require('./routes/productRoute');
 const userRouter = require('./routes/userRoutes');
+
+
 //  **** Rotes: rutas de la página web ****
 app.use(indexRouter)
 app.use('/product', productRouter)
 app.use('/user', userRouter)
+
 
 app.use((req, res, next) => {
     res.status(404).render('home/404');

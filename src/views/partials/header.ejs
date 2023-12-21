@@ -7,7 +7,6 @@
             <ul class="header__ul">
                 <li class="button-circle header__li"><a class="header__a" href="/"><span class="material-symbols-rounded">home</span></a></li>
                 <li class="button-circle header__li"><a class="header__a" href="/product"><span class="material-symbols-rounded">menu_book</span></a></li>
-                <li class="button-circle header__li"><a class="header__a" href="#"><span class="material-symbols-rounded">info</span></a></li>
                 <!-- <li class="header__li"><a class="header__a header__a--nav" href="#">Contacto</a></li> -->
             </ul>
         </nav>
@@ -20,7 +19,6 @@
         </button>
         <div class="header__nav">
             <ul class="header__ul">
-                <li class="button-circle header__li"><a class="header__a" href="#"><span class="material-symbols-rounded">search</span></a></li>
                 <li class="button-circle header__li"><a class="header__a" href="/product/cart"><span class="material-symbols-rounded">shopping_cart</span></a></li>
                 <li class="button-circle header__li button"><a class="header__a" href="/user/login"><span class="material-symbols-rounded">login</span></a></li>
                 <li class="button button-circle header__li"><a class="header__a" href="/product/create"><span class="span material-symbols-rounded">edit</span></a></li>
@@ -28,4 +26,17 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const menuButton = document.querySelector('.header__menu');
+            const nav = document.querySelector('.header__nav');
+        
+            menuButton.addEventListener('click', () => {
+                // Esto alternará la visibilidad del menú cuando se haga clic en el botón
+                nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+        </script>
+
 </header>

@@ -9,9 +9,53 @@
             <section class="container container-cart">
                 <div class="cart">
                     <div class="column-product-cart-list">
-                        
+                        <!-- Aquí iría la lista de productos en el carrito -->
+                        <ul class="cart-list">
+                            <!-- Cada producto en el carrito sería un elemento de la lista -->
+                            <li class="cart-item">
+                                <!-- Aquí irían los detalles del producto -->
+                                <div class="product-item">
+                                    <div class="product-image">
+                                        <!-- Aquí iría la imagen del producto -->
+                                        <img src="../../../public/images/banner.jpeg" alt="">
+                                        <div class="product-name-overlay">
+                                            <h2>Nombre del producto</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Resto de los detalles del producto -->
+                                </div>
+                                <div class="product-price">
+                                    <!-- Aquí iría el precio del producto -->
+                                    <p>$100</p>
+                                </div>
+                                <div class="product-quantity">
+                                    <!-- Aquí iría la cantidad del producto -->
+                                    <p>Cantidad: 1</p>
+                                </div>
+                                <div class="product-total">
+                                    <!-- Aquí iría el total del producto (precio * cantidad) -->
+                                    <p>Total: $100</p>
+                                </div>
+                                <div class="product-remove">
+                                    <!-- Aquí iría un botón para eliminar el producto del carrito -->
+                                    <button>Eliminar</button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="column-product-cart"></div>
+                    <div class="column-product-cart">
+                        <!-- Aquí iría el resumen del carrito -->
+                        <div class="cart-summary">
+                            <!-- Aquí irían los detalles del resumen del carrito como el subtotal, los impuestos, el envío, etc. -->
+                            <p>Subtotal: $100</p>
+                            <p>Impuestos: $20</p>
+                            <p>Total: $120</p>
+                        </div>
+                        <div class="cart-checkout">
+                            <!-- Aquí iría un botón para proceder al checkout -->
+                            <button>Proceder al checkout</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
