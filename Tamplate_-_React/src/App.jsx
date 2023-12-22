@@ -9,7 +9,7 @@ import ContentRowTop from './components/ContentRowTop';
 import Topbar from './components/Topbar';
 import LastMovie from './components/LastMovie';
 import Genres from './components/Genres';
-import Movies from './components/Movies';
+import Productos from './components/Productos';
 import Form from './components/Form';
 
 // Switch ---> Routes
